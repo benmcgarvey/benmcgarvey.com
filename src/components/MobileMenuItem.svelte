@@ -2,10 +2,6 @@
   export let item;
 </script>
 
-<li>
-  <a href="/">{ item }</a>
-</li>
-
 <style>
   * {
     display: none;
@@ -24,13 +20,21 @@
     }
 
     a {
-      display:inline-block;
+      display: inline-block;
       padding: 30px 48px;
       text-decoration: none;
     }
 
+    a:visited {
+      color: inherit;
+    }
+
     li:hover {
-      background: #f4f4f4
+      background: #f4f4f4;
     }
   }
 </style>
+
+<li>
+  <a href="/">{item}</a>
+</li>
