@@ -29,12 +29,15 @@
     background-color: #fff;
     list-style-type: none;
     color: #333;
+    border-left: 0.5px solid rgba(36, 36, 36, 0.2);
+    border-bottom: 0.5px solid rgba(36, 36, 36, 0.2);
+    border-radius: 0 0 0 10px;
   }
 
   .menu-mobile {
     margin-left: auto;
     background-color: transparent;
-    border: 1px solid rgba(0, 70, 1, 0.2);
+    border: 0 solid rgba(0, 70, 1, 0.2);
     border-radius: 2px;
     cursor: pointer;
     color: #333;
@@ -71,13 +74,16 @@
 
 <div class="menu-options">
   {#if toggleMenu}
-    <ul
-      in:fly={{ x: 1000, duration: 500 }}
-      out:fly={{ x: 1000, duration: 2000, opacity: 1 }}>
-      {#each menuItems as item}
-        <MobileMenuItem {item} />
-      {/each}
-    </ul>
+    <div class="bottom">
+      <ul
+        class="left"
+        in:fly={{ x: 1000, duration: 300 }}
+        out:fly={{ x: 1000, duration: 2000, opacity: 1 }}>
+        {#each menuItems as item}
+          <MobileMenuItem {item} />
+        {/each}
+      </ul>
+    </div>
   {/if}
 </div>
 <button on:click={handleClick} class="menu-mobile" class:active={toggleMenu}>
