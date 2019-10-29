@@ -20,6 +20,7 @@
     }
 
     a {
+      color: inherit;
       display: inline-block;
       text-decoration: none;
       padding-top: 30px;

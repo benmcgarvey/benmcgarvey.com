@@ -26,6 +26,7 @@
     font-weight: bold;
   }
   a {
+    color: inherit;
     display: inline-block;
     text-decoration: none;
   }

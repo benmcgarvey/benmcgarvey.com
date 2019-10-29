@@ -89,7 +89,7 @@ export const make_session_slug_processor = ({
 	const seen = new Set();
 
 	return string => {
-		const slug = processor(string, { separator });
+		const slug = processor(string.toLowerCase(), { separator });
 
 		if (seen.has(slug)) throw new Error(`Duplicate slug ${slug}`);
 		seen.add(slug);

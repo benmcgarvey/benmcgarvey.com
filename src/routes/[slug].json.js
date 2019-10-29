@@ -2,7 +2,9 @@ import posts from '../utils/markdown.js';
 
 const lookup = new Map();
 posts().forEach(post => {
-	lookup.set(post.slug, JSON.stringify(post));
+	if (post.metadata.draft !== 'true') {
+		lookup.set(post.slug, JSON.stringify(post));
+	}
 });
 
 export function get(req, res, next) {
