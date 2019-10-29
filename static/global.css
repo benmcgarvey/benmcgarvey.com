@@ -1,3 +1,24 @@
+:root {
+	--page-width: 8.5in;
+	--page-height: 11in;
+	--main-width: 6in;
+	--sidebar-width: calc(var(--page-width) - var(--main-width));
+	--decorator-horizontal-margin: 0.15in;
+  
+	--sidebar-horizontal-padding: 0.2in;
+  
+	--decorator-outer-offset-top: 10px;
+	--decorator-outer-offset-left: -5px;
+	--decorator-border-width: 1px;
+	--decorator-outer-dim: 9px;
+	--decorator-border: 1px solid #ccc;
+  
+	--row-blocks-padding-top: 5pt;
+	--date-block-width: 0.6in;
+  
+	--main-blocks-title-icon-offset-left: -16pt;
+  }
+
 body, html, #app {
 	margin: 0;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -14,4 +35,14 @@ body, html, #app {
 
 main {
 	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }

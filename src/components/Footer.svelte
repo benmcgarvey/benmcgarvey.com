@@ -40,7 +40,7 @@
   }
 </style>
 
-<div class="footer">
+<div class="footer no-print">
   <div class="content">
     <span class="site-name">Failing Gracefully,&nbsp;</span>
     <span>

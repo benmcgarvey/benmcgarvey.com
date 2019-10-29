@@ -33,5 +33,5 @@
 </style>
 
 <li>
-  <a href="/">{item}</a>
+  <a href={item.href}>{item.name}</a>
 </li>

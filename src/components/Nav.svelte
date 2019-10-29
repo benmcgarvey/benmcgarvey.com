@@ -4,7 +4,13 @@
   import MobileMenu from "./MobileMenu.svelte";
   import DesktopMenu from "./DesktopMenu.svelte";
 
-  const menuItems = ["home", "github", "resume", "linkedin", "contact"];
+  const menuItems = [
+    { name: "home", href: "/" },
+    { name: "github", href: "https://github.com/benmcgarvey" },
+    { name: "resume", href: "resume" },
+    { name: "linkedin", href: "https://linkedin.com/in/bmcgarvey" },
+    { name: "contact", href: "mailto:hello@benmcgarvey.com" }
+  ];
 </script>
 
 <style>
@@ -28,7 +34,7 @@
   }
 </style>
 
-<nav>
+<nav class="no-print">
   <div class="header">
     <Acorn />
     <DesktopMenu {menuItems} />
