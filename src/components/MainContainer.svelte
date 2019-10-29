@@ -7,6 +7,7 @@
   }
 
   .content {
+    margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
     font-size: 21px;

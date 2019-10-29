@@ -22,7 +22,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    width: 1100px;
+    width: 1000px;
     margin-left: 25px;
     margin-right: 25px;
   }

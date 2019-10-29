@@ -11,9 +11,25 @@
   }
 
   .list {
-    width: 1100px;
+    width: 1000px;
+    margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
+    font-size: 21px;
+    line-height: 158%;
+    max-width: 700px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>
 
