@@ -31,6 +31,14 @@
   a {
     text-decoration: none;
   }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: #729eb0;
+  }
 </style>
 
 <div class="container">

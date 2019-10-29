@@ -17,12 +17,12 @@
       text-decoration: none;
     }
 
-    a:hover {
-      color: rgba(0, 70, 1, 0.8);
-    }
-
     a:visited {
       color: inherit;
+    }
+
+    a:hover {
+      color: #729eb0;
     }
 
     li {

@@ -1,6 +1,6 @@
 <style>
   .footer {
-    background-color: rgba(80, 80, 80, 0.1);
+    background-color: transparent;
     font-size: 110%;
     min-height: 60px;
     display: flex;
@@ -24,6 +24,18 @@
 
   .site-name {
     font-weight: bold;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: rgb(236, 79, 39);
   }
 </style>
 
