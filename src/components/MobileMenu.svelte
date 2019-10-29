@@ -32,6 +32,7 @@
     border-left: 0.5px solid rgba(36, 36, 36, 0.2);
     border-bottom: 0.5px solid rgba(36, 36, 36, 0.2);
     border-radius: 0 0 0 10px;
+    width: 55%;
   }
 
   .menu-mobile {

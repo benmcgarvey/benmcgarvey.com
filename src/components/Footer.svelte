@@ -1,8 +1,8 @@
 <style>
   .footer {
-    background-color: rgba(0,70,1,0.1);
+    background-color: rgba(80, 80, 80, 0.1);
     font-size: 110%;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -29,11 +29,10 @@
 
 <div class="footer">
   <div class="content">
-    <span class="site-name">
-      Failing Gracefully,&nbsp;
-    </span>
+    <span class="site-name">Failing Gracefully,&nbsp;</span>
     <span>
-      made with <a href="https://svelte.dev/">Svelte</a>
+      made with
+      <a href="https://svelte.dev/">Svelte</a>
     </span>
   </div>
 </div>

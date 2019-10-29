@@ -21,8 +21,9 @@
 
     a {
       display: inline-block;
-      padding: 30px 48px;
       text-decoration: none;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     a:visited {

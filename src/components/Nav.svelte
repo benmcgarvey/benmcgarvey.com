@@ -13,7 +13,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
     box-shadow: 0 -0.4rem 0.9rem 0.2rem rgba(0, 0, 0, 0.5);
   }
 

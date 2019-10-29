@@ -48,10 +48,6 @@
   :global(ul) {
     line-height: 1.5;
   }
-
-  :global(li) {
-    margin: 0 0 0.5em 0;
-  }
 </style>
 
 <svelte:head>
