@@ -11,7 +11,7 @@
   }
 
   .list {
-    width: 1000px;
+    max-width: 1000px;
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
