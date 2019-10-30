@@ -10,6 +10,15 @@
     height: 100%;
   }
 
+  @media (max-width: 768px) {
+    .container {
+      display: flex;
+      justify-content: stretch;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   .list {
     max-width: 1000px;
     margin-top: 10px;
@@ -17,7 +26,6 @@
     margin-right: 25px;
     font-size: 21px;
     line-height: 158%;
-    max-width: 700px;
   }
 
   ul {

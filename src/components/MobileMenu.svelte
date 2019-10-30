@@ -77,6 +77,7 @@
   {#if toggleMenu}
     <div class="bottom">
       <ul
+        on:click={handleClick}
         class="left"
         in:fly={{ x: 1000, duration: 300 }}
         out:fly={{ x: 1000, duration: 2000, opacity: 1 }}>
