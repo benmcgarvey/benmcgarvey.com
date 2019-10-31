@@ -2,14 +2,15 @@
   .container {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-bottom: 50px;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .content {
     margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
     font-size: 21px;
     line-height: 158%;
     max-width: 700px;

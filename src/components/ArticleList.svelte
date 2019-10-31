@@ -6,24 +6,16 @@
 <style>
   .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      display: flex;
-      justify-content: stretch;
-      height: 100%;
-      width: 100%;
-    }
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .list {
-    max-width: 1000px;
+    max-width: 700px;
     margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
     font-size: 21px;
     line-height: 158%;
   }
