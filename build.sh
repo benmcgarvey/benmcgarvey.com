@@ -8,9 +8,12 @@ rm -rf __sapper__/export
 # run the site builder
 npm run export
 
-# copy over the site's CNAME and README file
-cp benmcgarvey.github.io/CNAME __sapper__/
-cp benmcgarvey.github.io/README.md __sapper__/
+# set up CNAME
+echo benmcgarvey.com >> __sapper__/CNAME
+echo www.benmcgarvey.com >> __sapper__/CNAME
+
+# set up README
+echo benmcgarvey.com >> __sapper__/README.md
 
 echo "Removing old site...\n"
 # scrub the submodule
