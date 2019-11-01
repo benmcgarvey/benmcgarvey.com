@@ -25,8 +25,10 @@ echo "Updating git submodule...\n"
 cd benmcgarvey.github.io
 git add .
 git commit -m ${1:-building}
+git push
 
 echo "Updating parent git...\n"
 cd -
 git add .
 git commit -m ${1:-building}
+git push
