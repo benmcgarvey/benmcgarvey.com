@@ -9,11 +9,11 @@ rm -rf __sapper__/export
 npm run export
 
 # set up CNAME
-echo benmcgarvey.com >> __sapper__/CNAME
-echo www.benmcgarvey.com >> __sapper__/CNAME
+echo benmcgarvey.com >> __sapper__/export/CNAME
+echo www.benmcgarvey.com >> __sapper__/export/CNAME
 
 # set up README
-echo benmcgarvey.com >> __sapper__/README.md
+echo benmcgarvey.com >> __sapper__/export/README.md
 
 echo "Removing old site...\n"
 # scrub the submodule
