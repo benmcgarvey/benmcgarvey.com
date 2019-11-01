@@ -6,7 +6,7 @@
 <style>
   .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100%;
     width: 100%;
     margin-left: 10%;
@@ -15,6 +15,7 @@
 
   .list {
     max-width: 700px;
+    width: 100%;
     margin-top: 10px;
     font-size: 21px;
     line-height: 158%;
