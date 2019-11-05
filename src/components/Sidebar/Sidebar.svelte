@@ -15,7 +15,6 @@
     padding: 1.85in 0.5in 0.6in var(--sidebar-horizontal-padding);
     background-color: #f2f2f2;
     font-size: 8.5pt;
-    z-index: -1;
   }
 </style>
 

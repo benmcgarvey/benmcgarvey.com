@@ -12,7 +12,6 @@
     font-weight: bold;
     text-decoration: none;
     margin: auto 0 auto 0.2in;
-    z-index: -1;
   }
   button:hover {
     background-color: transparent;
