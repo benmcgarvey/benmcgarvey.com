@@ -6,7 +6,11 @@
 </script>
 
 <style>
-
+  main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
 </style>
 
 <Nav {segment} />

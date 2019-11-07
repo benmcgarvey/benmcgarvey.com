@@ -6,29 +6,36 @@
 	<meta name='theme-color' content='#333333'>
 
 	%sapper.base%
-
-  <link rel='stylesheet' href='global.css'>
-  <!-- manifest needed? -->
+	
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='favicon.png'>
+	<style>
+		body, html, #app {
+			margin: 0;
+			font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
+			color: #333;
+			height: 100%;
+		}
 
-	<!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
+		#app {
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media print {    
+			.no-print, .no-print *
+			{
+				display: none !important;
+			}
+		}
+	</style>
 	%sapper.styles%
-
-	<!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
 	%sapper.head%
 </head>
 <body>
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
 	<div id="app">%sapper.html%</div>
-
-	<!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
 	%sapper.scripts%
 </body>
 </html>

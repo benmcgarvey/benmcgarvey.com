@@ -4,9 +4,6 @@ export const Acorn;
 import Body from 'components/Body.svelte';
 export const Body;
 
-import Email from 'components/Email.svelte';
-export const Email;
-
 import Footer from 'components/Footer.svelte';
 export const Footer;
 
