@@ -1,8 +1,8 @@
 <script>
-  import Printer from '../Shared/Printer.svelte';
+  import Printer from "../Shared/Printer.svelte";
 
-  export let name = 'name';
-  export let title = 'title';
+  export let name = "name";
+  export let title = "title";
 </script>
 
 <style>
@@ -29,12 +29,8 @@
 
 <header>
   <h1 class="name">
-    <span>
-      { name }
-    </span>
+    <span>{name}</span>
     <Printer />
   </h1>
-  <span class="title">
-    { title }
-  </span>
+  <span class="title">{title}</span>
 </header>

@@ -1,7 +1,7 @@
 <script>
-  import Title from './Title.svelte';
-  import Experience from './Experience/Experience.svelte';
-  import Education from './Education/Education.svelte';
+  import Title from "./Title.svelte";
+  import Experience from "./Experience/Experience.svelte";
+  import Education from "./Education/Education.svelte";
 
   export let name;
   export let title;
@@ -19,7 +19,7 @@
 </style>
 
 <section>
-  <Title { name } { title }/>
-  <Experience { experiences } />
-  <Education { education }/>
+  <Title {name} {title} />
+  <Experience {experiences} />
+  <Education {education} />
 </section>

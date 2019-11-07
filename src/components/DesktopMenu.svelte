@@ -1,13 +1,7 @@
 <script>
-  import DesktopMenuItem from './DesktopMenuItem.svelte';
+  import DesktopMenuItem from "./DesktopMenuItem.svelte";
   export let menuItems;
 </script>
-
-<ul class="no-mobile">
-  {#each menuItems as item}
-    <DesktopMenuItem { item } />
-  {/each}
-</ul>
 
 <style>
   ul {
@@ -19,3 +13,9 @@
     height: 100%;
   }
 </style>
+
+<ul class="no-mobile">
+  {#each menuItems as item}
+    <DesktopMenuItem {item} />
+  {/each}
+</ul>

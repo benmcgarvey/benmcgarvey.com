@@ -1,5 +1,4 @@
 <script>
-  import MainContainer from "./MainContainer.svelte";
   export let posts;
 </script>
 

@@ -1,5 +1,7 @@
 <style>
-  div, a, img {
+  div,
+  a,
+  img {
     width: 44px;
     height: 44px;
   }
@@ -7,6 +9,6 @@
 
 <div>
   <a href="/">
-    <img src="acorn.png" alt="acorn">
+    <img src="acorn.png" alt="acorn" />
   </a>
 </div>
