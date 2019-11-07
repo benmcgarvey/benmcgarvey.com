@@ -21,6 +21,7 @@
     align-items: center;
     min-height: 60px;
     box-shadow: 0 -0.4rem 0.9rem 0.2rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   .header {
