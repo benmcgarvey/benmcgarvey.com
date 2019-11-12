@@ -1,4 +1,4 @@
-import posts from '../utils/markdown.js';
+import posts from '../../utils/markdown.js';
 
 let json;
 

@@ -1,4 +1,4 @@
-import posts from '../utils/markdown.js';
+import posts from '../../utils/markdown.js';
 
 const lookup = new Map();
 posts().forEach(post => {

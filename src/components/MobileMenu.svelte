@@ -1,5 +1,5 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import MobileMenuItem from "./MobileMenuItem.svelte";
   export let menuItems;
 
@@ -77,10 +77,9 @@
   {#if toggleMenu}
     <div class="bottom">
       <ul
-        on:click={handleClick}
+        on:click={() => (toggleMenu = false)}
         class="left"
-        in:fly={{ x: 1000, duration: 300 }}
-        out:fly={{ x: 1000, duration: 2000, opacity: 1 }}>
+        transition:fade={{ duration: 100 }}>
         {#each menuItems as item}
           <MobileMenuItem {item} />
         {/each}
@@ -88,6 +87,10 @@
     </div>
   {/if}
 </div>
-<button on:click={handleClick} class="menu-mobile" class:active={toggleMenu}>
+<button
+  on:click={handleClick}
+  on:blur={() => (toggleMenu = false)}
+  class="menu-mobile"
+  class:active={toggleMenu}>
   menu
 </button>

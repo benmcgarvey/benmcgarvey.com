@@ -1,20 +1,12 @@
-<script context="module">
-  import ArticleList from "../components/ArticleList.svelte";
-  export function preload({ params, query }) {
-    return this.fetch(`index.json`)
-      .then(r => r.json())
-      .then(posts => {
-        return { posts };
-      });
-  }
-</script>
-
 <script>
-  export let posts;
+  import ArticleContainer from "../components/ArticleContainer.svelte";
 </script>
 
 <svelte:head>
   <title>failing-gracefully</title>
 </svelte:head>
 
-<ArticleList {posts} />
+<ArticleContainer>
+  <h1>Hi, I'm Ben McGarvey</h1>
+  <h2>I'm a Software Engineer from Melbourne, Australia</h2>
+</ArticleContainer>

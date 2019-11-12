@@ -6,6 +6,7 @@
 
   const menuItems = [
     { name: "home", href: "/" },
+    { name: "blog", href: "/blog" },
     { name: "github", href: "https://github.com/benmcgarvey" },
     { name: "resume", href: "resume" },
     { name: "linkedin", href: "https://linkedin.com/in/bmcgarvey" },
