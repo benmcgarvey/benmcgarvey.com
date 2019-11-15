@@ -54,4 +54,4 @@
   <title>{post.metadata.title}</title>
 </svelte:head>
 
-<Article title={post.metadata.title} content={post.html} />
+<Article {...post.metadata} content={post.html} />

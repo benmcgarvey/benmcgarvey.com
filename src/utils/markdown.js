@@ -130,8 +130,8 @@ export default function generate_posts() {
       const html = marked(content)
       return {
 				html: html.replace(/@@(\d+)/g, (m, id) => hashes[id] || m),
-        metadata,
-        slug,
+				metadata,
+				slug,
 				file,
       };
     })
