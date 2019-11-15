@@ -1,10 +1,10 @@
 <script>
-  import ArticleContainer from "./ArticleContainer.svelte";
+  import ContentContainer from "./ContentContainer.svelte";
   export let title;
   export let content;
 </script>
 
-<ArticleContainer>
+<ContentContainer>
   <h1>{title}</h1>
   {@html content}
-</ArticleContainer>
+</ContentContainer>

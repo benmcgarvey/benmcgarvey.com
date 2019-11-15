@@ -1,17 +1,9 @@
 <script>
+  import ContentContainer from "./ContentContainer.svelte";
   export let posts;
 </script>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
   .list {
     max-width: 700px;
     width: 100%;
@@ -42,7 +34,7 @@
   }
 </style>
 
-<div class="container">
+<ContentContainer>
   <div class="list">
     <h1>Recent posts</h1>
     <ul>
@@ -53,4 +45,4 @@
       {/each}
     </ul>
   </div>
-</div>
+</ContentContainer>
