@@ -19,19 +19,41 @@
 
   ul {
     padding-left: 0;
+    line-height: 1.5;
   }
 
   li {
     list-style-type: none;
   }
 
+  .title {
+    margin-right: 10px;
+  }
+
+  .link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: flex-end;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 767px) {
+    .link {
+      flex-flow: column;
+    }
+  }
+
+  .date {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .date > span {
+    font-size: 70%;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  a:visited {
-    color: inherit;
   }
 
   a:hover {
@@ -45,7 +67,12 @@
     <ul>
       {#each sortedPosts as post}
         <li>
-          <a rel="prefetch" href="blog/{post.slug}">{post.metadata.title}</a>
+          <a class="link" rel="prefetch" href="blog/{post.slug}">
+            <div class="title">{post.metadata.title}</div>
+            <div class="date">
+              <span>{new Date(post.metadata.date).toDateString()}</span>
+            </div>
+          </a>
         </li>
       {/each}
     </ul>
