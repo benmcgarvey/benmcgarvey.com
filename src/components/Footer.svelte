@@ -22,7 +22,9 @@
     width: 100%;
   }
 
-  .site-name {
+  .site-name,
+  .site-author,
+  .svelte {
     font-weight: bold;
   }
   a {
@@ -35,8 +37,12 @@
     color: inherit;
   }
 
-  a:hover {
+  .svelte:hover {
     color: rgb(236, 79, 39);
+  }
+
+  .site-author:hover {
+    color: #729eb0;
   }
 </style>
 
@@ -45,7 +51,11 @@
     <span class="site-name">Failing Gracefully,&nbsp;</span>
     <span>
       made with
-      <a href="https://svelte.dev/">Svelte</a>
+      <a class="svelte" href="https://svelte.dev/">Svelte,</a>
+      by
+      <a class="site-author" href="https://github.com/benmcgarvey">
+        Ben McGarvey
+      </a>
     </span>
   </div>
 </div>
