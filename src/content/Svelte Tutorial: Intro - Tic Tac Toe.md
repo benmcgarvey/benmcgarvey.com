@@ -1,7 +1,7 @@
 ---
 title: Intro to Svelte - Tic Tac Toe
-date: 2019-09-24T20:16:45+10:00
-draft: true
+date: 2020-11-24T20:16:45+10:00
+draft: false
 ---
 
 This is a tutorial for the Svelte js framework inspired by the [React tic-tac-toe intro tutorial](https://reactjs.org/tutorial/tutorial.html). 

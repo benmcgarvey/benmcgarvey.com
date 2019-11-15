@@ -1,6 +1,11 @@
 <script>
   import ContentContainer from "./ContentContainer.svelte";
   export let posts;
+
+  const sortPosts = posts =>
+    posts.sort((a, b) => a.metadata.date > b.metadata.date);
+
+  const sortedPosts = sortPosts(posts);
 </script>
 
 <style>
@@ -38,7 +43,7 @@
   <div class="list">
     <h1>Recent posts</h1>
     <ul>
-      {#each posts as post}
+      {#each sortedPosts as post}
         <li>
           <a rel="prefetch" href="blog/{post.slug}">{post.metadata.title}</a>
         </li>
