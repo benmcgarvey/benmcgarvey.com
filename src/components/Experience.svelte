@@ -72,7 +72,7 @@
     font-size: 90%;
   }
 
-  :global(img) {
+  .img {
     clip-path: circle(50% at center);
   }
 </style>
@@ -80,8 +80,8 @@
 <div class="container">
   <header>
     <div class="title">
-      <div>
-        <ImageLink {src} {href} alt="experience" />
+      <div class="img">
+        <ImageLink size="33px" {src} {href} alt="experience" />
       </div>
       <span>{title}</span>
     </div>

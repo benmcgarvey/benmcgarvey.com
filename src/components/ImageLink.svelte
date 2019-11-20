@@ -2,19 +2,17 @@
   export let href = "/";
   export let src = "acorn.png";
   export let alt = "ImageLink";
+  export let size = "44px";
+
+  const styles = `width: ${size}; height: ${size}`;
 </script>
 
 <style>
-  div,
-  a,
-  img {
-    width: 44px;
-    height: 44px;
-  }
+
 </style>
 
-<div>
-  <a {href}>
-    <img {src} {alt} />
+<div style={styles}>
+  <a style={styles} {href}>
+    <img style={styles} {src} {alt} />
   </a>
 </div>
