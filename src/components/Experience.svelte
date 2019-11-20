@@ -44,6 +44,11 @@
     z-index: -1;
   }
 
+  .titlebox {
+    display: flex;
+    align-items: center;
+  }
+
   .title {
     display: flex;
     align-items: center;
@@ -60,9 +65,9 @@
   }
 
   .dates {
-    font-size: 60%;
-    font-weight: 200;
-    line-height: 80%;
+    font-size: 90%;
+    font-weight: 400;
+    line-height: 90%;
   }
 
   ul {
@@ -81,10 +86,6 @@
     text-decoration: none;
   }
 
-  .title:hover {
-    color: #ffdd1fe3;
-  }
-
   a:visited {
     color: inherit;
   }
@@ -92,23 +93,24 @@
 
 <div class="container">
   <header>
-
-    <a {href}>
-      <div class="title">
-        <div class="img">
-          <ImageLink size="33px" {src} {href} alt="experience" />
+    <div class="titlebox">
+      <a {href}>
+        <div class="title">
+          <div class="img">
+            <ImageLink size="33px" {src} {href} alt="experience" />
+          </div>
+          <span>{title}</span>
         </div>
-        <span>{title}</span>
-
-      </div>
-    </a>
+      </a>
+    </div>
     <span class="place">{place} -</span>
     <span class="location">{location}</span>
+
+    <span>({from} -</span>
+    <span>{to})</span>
+
   </header>
-  <div class="dates">
-    <span>{from} to</span>
-    <span>{to}</span>
-  </div>
+  <div class="dates" />
   <div class="details">
     <ul>
       {#each details as detail}
