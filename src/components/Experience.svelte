@@ -25,6 +25,10 @@
     margin: 30px 0;
   }
 
+  .container:first-of-type {
+    margin-top: 0px;
+  }
+
   .container:after {
     content: " ";
     background: repeating-linear-gradient(

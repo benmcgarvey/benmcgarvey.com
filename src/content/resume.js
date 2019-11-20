@@ -37,7 +37,7 @@ export default {
     {
       "src": "sidekicker.png",
       "href": "https://sidekicker.com",
-      "title": "03ketplace Coordinator",
+      "title": "Marketplace Coordinator",
       "place": "Sidekicker",
       "location": "Melbourne, Australia",
       "from": "03/17",
@@ -92,8 +92,10 @@ export default {
   ],
   "education": [
     {
-      "name": "B.Sc Software and Computer Systems",
-      "school": "University of Melbourne",
+      "src": "uom.png",
+      "href": "https://study.unimelb.edu.au/find/courses/major/computing-and-software-systems/",
+      "title": "B.Sc Software and Computer Systems",
+      "place": "University of Melbourne",
       "location": "Melbourne, Australia",
       "from": "06/16",
       "to": "06/19",
