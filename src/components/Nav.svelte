@@ -1,6 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
-  import Acorn from "./Acorn.svelte";
+  import ImageLink from "./ImageLink.svelte";
   import MobileMenu from "./MobileMenu.svelte";
   import DesktopMenu from "./DesktopMenu.svelte";
 
@@ -36,7 +36,7 @@
 
 <nav class="no-print">
   <div class="header">
-    <Acorn />
+    <ImageLink />
     <DesktopMenu {menuItems} />
     <MobileMenu {menuItems} />
   </div>

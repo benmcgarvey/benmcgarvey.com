@@ -9,6 +9,8 @@ export default {
   },
   "experiences": [
     {
+      "src": "sidekicker.png",
+      "href": "https://sidekicker.com",
       "title": "Software Engineer",
       "place": "Sidekicker",
       "location": "Melbourne, Australia",
@@ -20,6 +22,8 @@ export default {
       ]
     },
     {
+      "src": "sidekicker.png",
+      "href": "https://sidekicker.com",
       "title": "QA Engineer",
       "place": "Sidekicker",
       "location": "Melbourne, Australia",
@@ -31,6 +35,8 @@ export default {
       ]
     },
     {
+      "src": "sidekicker.png",
+      "href": "https://sidekicker.com",
       "title": "Marketplace Coordinator",
       "place": "Sidekicker",
       "location": "Melbourne, Australia",
@@ -44,6 +50,8 @@ export default {
       ]
     },
     {
+      "src": "uom.png",
+      "href": "https://www.unimelb.edu.au/",
       "title": "Emergency Management Data Administrator",
       "place": "University of Melbourne",
       "location": "Melbourne, Australia",
@@ -56,6 +64,8 @@ export default {
       ]
     },
     {
+      "src": "bcdtravel.png",
+      "href": "https://www.bcdtravel.com/",
       "title": "Corporate Travel Consultant",
       "place": "BCD Travel",
       "location": "Melbourne, Australia",
@@ -67,6 +77,8 @@ export default {
       ]
     },
     {
+      "src": "statravel.png",
+      "href": "https://www.statravel.com.au/",
       "title": "Store Manager",
       "place": "STA Travel",
       "location": "Melbourne, Australia",

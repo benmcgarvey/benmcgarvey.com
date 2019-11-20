@@ -10,9 +10,7 @@
   }
 
   .content {
-    margin-top: 10px;
-    font-size: 21px;
-    line-height: 158%;
+    margin-top: 30px;
     max-width: 700px;
     word-break: break-word;
     width: 100%;
