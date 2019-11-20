@@ -48,10 +48,11 @@
     display: flex;
     align-items: center;
     font-weight: bolder;
+    font-size: 1.4em;
   }
 
   .title > div {
-    margin-right: 10px;
+    margin-right: 8px;
   }
 
   .location {
@@ -75,16 +76,32 @@
   .img {
     clip-path: circle(50% at center);
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  .title:hover {
+    color: #ffdd1fe3;
+  }
+
+  a:visited {
+    color: inherit;
+  }
 </style>
 
 <div class="container">
   <header>
-    <div class="title">
-      <div class="img">
-        <ImageLink size="33px" {src} {href} alt="experience" />
+
+    <a {href}>
+      <div class="title">
+        <div class="img">
+          <ImageLink size="33px" {src} {href} alt="experience" />
+        </div>
+        <span>{title}</span>
+
       </div>
-      <span>{title}</span>
-    </div>
+    </a>
     <span class="place">{place} -</span>
     <span class="location">{location}</span>
   </header>
