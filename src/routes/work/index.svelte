@@ -1,6 +1,7 @@
 <script>
   import ContentContainer from "../../components/ContentContainer.svelte";
   import Experience from "../../components/Experience.svelte";
+  import Skill from "../../components/Skill.svelte";
 
   import resume from "../../content/resume.js";
 
@@ -39,6 +40,7 @@
 
   button.active {
     background: white;
+    z-index: 1;
   }
 
   .content {
@@ -61,6 +63,9 @@
     {:else}
       {#each resume.education as educations}
         <Experience {...educations} />
+      {/each}
+      {#each resume.skills as skill}
+        <Skill {...skill} />
       {/each}
     {/if}
   </div>
