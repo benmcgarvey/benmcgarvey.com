@@ -38,5 +38,5 @@
 </style>
 
 <li>
-  <a href={item.href}>{item.name}</a>
+  <a rel="prefetch" href={item.href}>{item.name}</a>
 </li>
