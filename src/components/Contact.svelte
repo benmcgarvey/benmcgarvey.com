@@ -5,9 +5,9 @@
 <style>
   .container {
     display: flex;
-    justify-content: center;
-    align-content: space-around;
     flex-flow: row wrap;
+    justify-content: center;
+    align-content: stretch;
   }
 
   .contact {

@@ -50,6 +50,7 @@
 
   .titlebox {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
   }
 
