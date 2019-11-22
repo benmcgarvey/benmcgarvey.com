@@ -5,10 +5,8 @@
     min-height: 60px;
     display: flex;
     flex-flow: row;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
   }
 
   .content {

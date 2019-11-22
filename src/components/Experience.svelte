@@ -52,6 +52,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    margin-bottom: 5px;
   }
 
   .title {
@@ -88,11 +89,17 @@
   }
 
   a {
+    color: inherit;
+    display: inline-block;
     text-decoration: none;
   }
 
   a:visited {
     color: inherit;
+  }
+
+  a:hover {
+    color: #729eb0;
   }
 </style>
 
