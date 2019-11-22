@@ -1,4 +1,6 @@
 <script>
+  import { fly } from "svelte/transition";
+
   import ContentContainer from "../../components/ContentContainer.svelte";
   import Experience from "../../components/Experience.svelte";
   import Skill from "../../components/Skill.svelte";
@@ -17,14 +19,14 @@
     display: flex;
     position: absolute;
     width: 100%;
-    height: 40px;
+    height: 50px;
     left: 0;
     top: 60px;
     box-shadow: 0 -0.4rem 0.9rem rgba(0, 0, 0, 0.5);
   }
   button {
     width: 100%;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-transform: lowercase;
     margin: 0;
     padding-top: 0;
@@ -43,12 +45,12 @@
   }
 
   .content {
-    margin-top: 30px;
+    margin-top: 60px;
   }
 </style>
 
 <ContentContainer>
-  <div class="nav">
+  <div class="nav" in:fly={{ y: -100, duration: 400 }}>
     <button class:active={work} on:click={() => handleClick(true)}>work</button>
     <button class:active={!work} on:click={() => handleClick(false)}>
       skills
