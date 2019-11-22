@@ -1,12 +1,28 @@
 export default {
   "name": "ben mcgarvey",
   "title": "software engineer",
-  "contacts": {
-    "website": "benmcgarvey.com",
-    "github": "github.com/benmcgarvey",
-    "email": "hello@benmcgarvey.com",
-    "linkedin": "linkedin.com/in/bmcgarvey"
-  },
+  "contacts": [
+    {
+      "name": "website",
+      "href": "https://benmcgarvey.com",
+      "display": "benmcgarvey.com"
+    },
+    {
+      "name": "github",
+      "href": "https://github.com/benmcgarvey",
+      "display": "github.com/benmcgarvey"
+    },
+    {
+      "name": "linkedin",
+      "href": "https://linkedin.com/in/bmcgarvey",
+      "display": "linkedin.com/in/bmcgarvey"
+    },
+    {
+      "name": "email",
+      "href": "mailto:hello@benmcgarvey.com",
+      "display": "hello@benmcgarvey.com"
+    }
+  ],
   "experiences": [
     {
       "src": "sidekicker.png",

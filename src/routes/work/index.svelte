@@ -40,7 +40,6 @@
 
   button.active {
     background: white;
-    z-index: 1;
   }
 
   .content {
