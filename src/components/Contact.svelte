@@ -6,8 +6,8 @@
   .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-content: stretch;
+    justify-content: space-around;
+    align-content: space-around;
   }
 
   .contact {
@@ -22,7 +22,7 @@
     background: white;
     position: relative;
     padding: 32px;
-    margin: 30px;
+    margin: 20px;
   }
 
   .contact:after {
