@@ -21,21 +21,26 @@
     margin-top: 30px;
   }
 
+  :global(a) {
+    color: #8fbcbc;
+    text-decoration: none;
+  }
+
+  :global(a:visited) {
+    color: #8fbcbc;
+  }
+
+  :global(a:focus),
+  :global(a:hover) {
+    text-decoration: underline;
+  }
+
   :global(p) {
     font-size: 16px;
   }
 
   :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-
-  :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
+    border-radius: 10px;
   }
 </style>
 
