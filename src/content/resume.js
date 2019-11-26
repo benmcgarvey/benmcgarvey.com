@@ -21,6 +21,11 @@ export default {
       "name": "email",
       "href": "mailto:hello@benmcgarvey.com",
       "display": "hello@benmcgarvey.com"
+    },
+    {
+      "name": "phone",
+      "href": "tel:+19177253106",
+      "display": "+1 917 725 3106"
     }
   ],
   "experiences": [
