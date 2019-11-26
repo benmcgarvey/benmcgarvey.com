@@ -20,6 +20,7 @@
 
 <svelte:head>
   <title>{post.metadata.title}</title>
+  <link rel="stylesheet" href="nord.css" />
 </svelte:head>
 
 <Article {...post.metadata} content={post.html} />

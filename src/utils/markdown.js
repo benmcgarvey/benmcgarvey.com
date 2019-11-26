@@ -1,14 +1,38 @@
 import fs from 'fs';
 import path from 'path';
 import slugify from 'slugify';
+import PrismJS from 'prismjs';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-css';
+
+// map lang to prism-language-attr
+export const langs = {
+	bash: 'bash',
+	html: 'markup',
+	svelte: 'markup',
+	js: 'javascript',
+	css: 'css'
+};
+
 const marked = require('marked');
 // Set options
 // `highlight` example uses `highlight.js`
 marked.setOptions({
   renderer: new marked.Renderer(),
-  highlight: function(code) {
-    return require('highlight.js').highlightAuto(code).value;
+  highlight: function(code, language) {
+	const highlighted = PrismJS.highlight(
+		code,
+		PrismJS.languages[langs[language]],
+		language,
+	);
+
+	
+
+	return `<pre class='test language-${langs[language]}'><code>${highlighted}</code></pre>`;
   },
+  
   pedantic: false,
   gfm: true,
   breaks: false,
