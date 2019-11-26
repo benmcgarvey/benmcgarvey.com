@@ -1,8 +1,7 @@
 <script>
-  export let website;
-  export let github;
-  export let email;
-  export let linkedin;
+  export let contacts;
+
+  const lookup = name => contacts.find(contact => contact.name === name);
 </script>
 
 <style>
@@ -35,20 +34,19 @@
   <h1>Contact Info</h1>
   <ul>
     <li>
-      <i class="icon-earth" />
-      <a href="https://{website}">{website}</a>
+      <a href={lookup('website').href}>{lookup('website').display}</a>
     </li>
     <li>
-      <i class="icon-github" />
-      <a href="https://{github}">{github}</a>
+      <a href={lookup('github').href}>{lookup('github').display}</a>
     </li>
     <li>
-      <i class="icon-mail4" />
-      <a href="mailto:{email}">{email}</a>
+      <a href={lookup('email').href}>{lookup('email').display}</a>
     </li>
     <li>
-      <i class="icon-linkedin2" />
-      <a href="https://{linkedin}">{linkedin}</a>
+      <a href={lookup('linkedin').href}>{lookup('linkedin').display}</a>
+    </li>
+    <li>
+      <a href={lookup('phone').href}>{lookup('phone').display}</a>
     </li>
   </ul>
 </div>

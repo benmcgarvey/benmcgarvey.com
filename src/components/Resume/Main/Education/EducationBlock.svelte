@@ -3,8 +3,8 @@
   import Decorator from "../../Shared/Decorator.svelte";
   import Details from "../../Shared/Details.svelte";
 
-  export let name;
-  export let school;
+  export let title;
+  export let place;
   export let location;
   export let from;
   export let to;
@@ -21,5 +21,5 @@
 <section>
   <Date {from} {to} />
   <Decorator />
-  <Details title={name} place={school} {location} {details} />
+  <Details {title} {place} {location} {details} />
 </section>

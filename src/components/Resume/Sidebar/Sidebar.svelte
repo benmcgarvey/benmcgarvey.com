@@ -19,6 +19,6 @@
 </style>
 
 <aside>
-  <Contacts {...contacts} />
+  <Contacts {contacts} />
   <Skills {skills} />
 </aside>

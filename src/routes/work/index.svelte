@@ -1,11 +1,12 @@
 <script>
+  import Resume from "../../components/Resume/Resume.svelte";
+  import Printer from "../../components/Resume/Shared/Printer.svelte";
+  import resume from "../../content/resume.js";
   import { fly } from "svelte/transition";
 
   import ContentContainer from "../../components/ContentContainer.svelte";
   import Experience from "../../components/Experience.svelte";
   import Skill from "../../components/Skill.svelte";
-
-  import resume from "../../content/resume.js";
 
   let work = true;
 
@@ -24,7 +25,7 @@
     top: 60px;
     box-shadow: 0 -0.4rem 0.9rem rgba(0, 0, 0, 0.5);
   }
-  button {
+  .nav > button {
     width: 100%;
     font-size: 1.2em;
     text-transform: lowercase;
@@ -40,35 +41,97 @@
     background: rgb(243, 243, 243);
   }
 
-  button.active {
+  .nav > button.active {
     background: white;
   }
 
   .content {
-    margin-top: 60px;
+    margin-top: 40px;
+  }
+
+  .outer {
+    overflow: hidden;
+    position: relative;
+  }
+  .inner {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: -50px;
+    top: 50px;
+  }
+
+  .printer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  .printer:hover {
+    background-color: transparent;
+    color: #729eb0;
+  }
+  .printer:active {
+    position: relative;
+    top: 1px;
+  }
+  .printer:focus {
+    outline: 0;
+    color: #729eb0;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .outer.print {
+      overflow: initial;
+      position: initial;
+    }
+
+    .inner.print {
+      position: 0;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      top: 0;
+    }
   }
 </style>
 
 <ContentContainer>
-  <div class="nav" in:fly={{ y: -100, duration: 400 }}>
+  <div class="nav no-print" in:fly={{ y: -100, duration: 400 }}>
     <button class:active={work} on:click={() => handleClick(true)}>work</button>
     <button class:active={!work} on:click={() => handleClick(false)}>
       skills
     </button>
   </div>
   <div class="content">
-    {#if work}
-      {#each resume.experiences as experience}
-        <Experience {...experience} />
-      {/each}
-    {:else}
-      {#each resume.education as educations}
-        <Experience {...educations} />
-      {/each}
-      {#each resume.skills as skill}
-        <Skill {...skill} />
-      {/each}
-    {/if}
+    <button class="no-print printer" onclick="window.print()">Print</button>
+    <div class="no-print">
+      {#if work}
+        {#each resume.experiences as experience}
+          <Experience {...experience} />
+        {/each}
+      {:else}
+        {#each resume.education as educations}
+          <Experience {...educations} />
+        {/each}
+        {#each resume.skills as skill}
+          <Skill {...skill} />
+        {/each}
+      {/if}
+    </div>
   </div>
 
 </ContentContainer>
+
+<div class="outer print">
+  <div class="inner print">
+    <Resume {resume} />
+  </div>
+</div>
