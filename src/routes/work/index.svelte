@@ -70,6 +70,9 @@
     text-decoration: none;
     margin-bottom: 15px;
   }
+  .printer:visited {
+    color: black;
+  }
   .printer:hover {
     background-color: transparent;
     color: #729eb0;
