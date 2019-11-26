@@ -1,4 +1,11 @@
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   div {
     padding-top: var(--row-blocks-padding-top);
     flex: 0 0 0;

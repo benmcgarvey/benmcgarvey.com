@@ -3,6 +3,13 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   div {
     line-height: 1.5;
     padding-top: 0.8in;

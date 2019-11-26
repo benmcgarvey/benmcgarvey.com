@@ -12,6 +12,13 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   section {
     display: flex;
     flex-flow: row nowrap;

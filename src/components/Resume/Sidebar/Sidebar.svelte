@@ -7,6 +7,13 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   aside {
     float: right;
     position: relative;

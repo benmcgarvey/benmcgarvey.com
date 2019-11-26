@@ -1,4 +1,11 @@
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   button {
     background-color: transparent;
     -moz-border-radius: 3px;

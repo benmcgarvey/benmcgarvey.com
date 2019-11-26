@@ -36,7 +36,7 @@
 
     --main-blocks-title-icon-offset-left: -16pt;
   }
-  :global(*) {
+  * {
     box-sizing: border-box;
     -webkit-print-color-adjust: exact;
     -webkit-hyphens: none;

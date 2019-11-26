@@ -6,6 +6,13 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   .main {
     flex: 1 0 0;
     padding-left: var(--decorator-horizontal-margin);

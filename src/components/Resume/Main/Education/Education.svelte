@@ -5,6 +5,13 @@
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+  }
   section {
     margin-top: 0.1in;
   }
