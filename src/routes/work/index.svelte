@@ -38,11 +38,14 @@
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
-    background: rgb(243, 243, 243);
+
+    background: rgba(243, 243, 243, 0.5);
   }
 
   .nav > button.active {
     background: white;
+    box-shadow: 0 -0.4rem 0.9rem rgba(0, 0, 0, 0.2);
+    z-index: 0;
   }
 
   .content {
