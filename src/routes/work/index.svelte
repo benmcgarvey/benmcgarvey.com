@@ -109,6 +109,9 @@
   }
 </style>
 
+<svelte:head>
+  <title>Ben McGarvey | Work</title>
+</svelte:head>
 <ContentContainer>
   <div class="nav no-print" in:fly={{ y: -100, duration: 400 }}>
     <button class:active={work} on:click={() => handleClick(true)}>work</button>

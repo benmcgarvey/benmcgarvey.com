@@ -10,4 +10,7 @@
   export let posts;
 </script>
 
+<svelte:head>
+  <title>Ben McGarvey | Blog</title>
+</svelte:head>
 <ArticleList {posts} />

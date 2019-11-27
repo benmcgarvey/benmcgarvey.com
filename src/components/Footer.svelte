@@ -20,7 +20,6 @@
     width: 100%;
   }
 
-  .site-name,
   .site-author,
   .svelte {
     font-weight: bold;
@@ -46,9 +45,8 @@
 
 <div class="footer no-print">
   <div class="content">
-    <span class="site-name">Failing Gracefully,&nbsp;</span>
     <span>
-      made with
+      Made with
       <a class="svelte" href="https://svelte.dev/">Svelte,</a>
       by
       <a class="site-author" href="https://github.com/benmcgarvey">

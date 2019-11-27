@@ -47,10 +47,13 @@
 <ContentContainer>
   <article>
     <h1>{title}</h1>
-    <h2 class="date">
-      Published: {new Date(date).toDateString()}
-      {#if edited}- Edited: {new Date(edited).toDateString()}{/if}
-    </h2>
+
+    {#if edited}
+      <h2 class="date">Edited: {new Date(edited).toDateString()}</h2>
+    {:else}
+      <h2 class="date">Published: {new Date(date).toDateString()}</h2>
+    {/if}
+
     <div class="body">
       {@html content}
     </div>

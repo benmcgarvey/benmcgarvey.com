@@ -54,10 +54,6 @@
   }
 </style>
 
-<svelte:head>
-  <title>{name}</title>
-</svelte:head>
-
 <div class="resume">
   <Main {name} {title} {experiences} {education} />
   <Sidebar {contacts} {skills} />

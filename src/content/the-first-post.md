@@ -1,7 +1,7 @@
 ---
 title: The First Post
 date: 2019-09-04T02:00:00+10:00
-edited: 2019-11-15T02:00:00+10:00
+edited: 2019-11-28T00:48:00+10:00
 draft: false
 ---
 
@@ -28,12 +28,3 @@ _V2 is designed and written by me using [Svelte](https://svelte.dev). Svelte is 
 _I like things which are small, simple and effective. Which is why I like svelte, and why I chose it for my site._
 
 _The source code can be found [here](https://github.com/benmcgarvey/benmcgarveysvelte)._
-## What's in a name?
-
-The final note for this intro blog is to mention the name, "failing-gracefully". 
-
-I didn't choose it just for the cool pun. Only _partially._ It's a goal: fail, gracefully.
-
-In my opinion, Failure is necessary and expected in the pursuit of anything. Failure should be embraced and welcomed. It's an invaluable opportunity to learn and develop character. 
-
-Learning how to fail, and how to recover from failure is essential to both being a good developer, and a good human. I hope this blog reflects that.
