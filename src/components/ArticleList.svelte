@@ -6,8 +6,6 @@
     posts
       .filter(post => post.metadata.draft !== "true")
       .sort((a, b) => a.metadata.date > b.metadata.date);
-
-  console.log(posts);
   const sortedPosts = sortPosts(posts);
 </script>
 
