@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo "Saving current repo...\n"
+git add .
+git commit -m ${1:-building}
+git push
+
 echo "Building...\n"
 
 # remove any old builds

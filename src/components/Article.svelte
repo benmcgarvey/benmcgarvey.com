@@ -21,25 +21,25 @@
     margin-top: 30px;
   }
 
-  :global(a) {
+  :global(article a) {
     color: #8fbcbc;
     text-decoration: none;
   }
 
-  :global(a:visited) {
+  :global(article a:visited) {
     color: #8fbcbc;
   }
 
-  :global(a:focus),
-  :global(a:hover) {
+  :global(article a:focus),
+  :global(article a:hover) {
     text-decoration: underline;
   }
 
-  :global(p) {
+  :global(article p) {
     font-size: 16px;
   }
 
-  :global(pre) {
+  :global(article pre) {
     border-radius: 10px;
   }
 </style>

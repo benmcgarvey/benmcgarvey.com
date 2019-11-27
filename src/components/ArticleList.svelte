@@ -3,9 +3,7 @@
   export let posts;
 
   const sortPosts = posts =>
-    posts
-      .filter(post => post.metadata.draft !== "true")
-      .sort((a, b) => a.metadata.date > b.metadata.date);
+    posts.sort((a, b) => a.metadata.date > b.metadata.date);
   const sortedPosts = sortPosts(posts);
 </script>
 
