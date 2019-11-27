@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export",
+    "export": "sapper export --entry 'index.html blog/intro-to-svelte-tic-tac-toe'",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
