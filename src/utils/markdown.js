@@ -6,6 +6,7 @@ import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-jsx';
 
 // map lang to prism-language-attr
 export const langs = {
@@ -13,7 +14,8 @@ export const langs = {
 	html: 'markup',
 	svelte: 'markup',
 	js: 'javascript',
-	css: 'css'
+	css: 'css',
+	jsx: 'jsx'
 };
 
 const marked = require('marked');

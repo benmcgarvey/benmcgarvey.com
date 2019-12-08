@@ -3,7 +3,7 @@
   export let posts;
 
   const sortPosts = posts =>
-    posts.sort((a, b) => a.metadata.date > b.metadata.date);
+    posts.sort((a, b) => (a.metadata.edited || a.metadata.date) < (b.metadata.edited || b.metadata.date));
   const sortedPosts = sortPosts(posts);
 </script>
 
@@ -23,6 +23,7 @@
 
   li {
     list-style-type: none;
+    width: fit-content;
   }
 
   .title {
@@ -69,7 +70,7 @@
           <a class="link" rel="prefetch" href="blog/{post.slug}">
             <div class="title">{post.metadata.title}</div>
             <div class="date">
-              <span>{new Date(post.metadata.date).toDateString()}</span>
+              <span>{new Date(post.metadata.edited || post.metadata.date).toDateString()}</span>
             </div>
           </a>
         </li>

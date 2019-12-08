@@ -1,22 +1,22 @@
 ---
 title: Intro to Svelte - Tic Tac Toe
-date: 2019-11-26T18:52:00+10:00
-draft: true
+date: 2019-12-08T12:00:00+10:00
+draft: false
 ---
 
 This is a tutorial for the Svelte javascript framework inspired by the Intro to React [tutorial](https://reactjs.org/tutorial/tutorial.html).
 
-We'll follow the React version pretty closely so I'd recommend giving it a quick read if you aren't already familiar with it.
+We'll follow the React version pretty tightly as far as milestones go but our implementation will start to diverge towards the middle.
 
-I made this tutorial as a way to teach myself more about Svelte and hopefully provide something useful for other folks who want to learn about it too. Any feedback is welcome.
+I made this tutorial as a way to teach myself more about Svelte and hopefully provide something useful for other folks who want to learn about it too.
 
 ## So what are we building?
 
-Just like in the React version, we're going to be building a small game to demonstrate some of Svelte's core features such as creating components and managing state.
+Just like in the React version, we're going to be building an interactive tic-tac-toe game to demonstrate some of Svelte's core features such as creating components, and managing state.
 
-You can take a look at the final product here: [Final Result](https://svelte.dev/repl/fd5d45a774a54c85bb3db1199c07b42a?version=3.12.1). There is a bit going on in there but don't worry, we're going to build it up together, piece by piece.
+You can take a look at the fiinished project here: [Final Result](https://svelte.dev/repl/fd5d45a774a54c85bb3db1199c07b42a?version=3.12.1). There is a bit going on in there but don't worry, we're going to build it up together, piece by piece.
 
-The interesting thing to note about this game is the history you'll see buiding up to the side as you progress through the game. You can use this to travel backwards and forwards in time through the game. This is pretty neat and is a key feature in the React version of this tutorial. Stay tuned to see how it's done with Svelte!
+The interesting thing to note about this game is the history you'll see buiding up to the side as you progress through the game. You can use this to travel backwards and forwards in time through the game. Stay tuned to see how it's done with Svelte!
 
 ## Setup
 
@@ -32,11 +32,11 @@ Open up the starter code [here](https://svelte.dev/repl/75f705a8650f4851bd2e1724
 
 ### Option 2: Write code in a local environment
 
-This takes a little more setup, and is completely optional, but should be straightforward if you're comfortable on a command line.
+This takes a little more setup, and is completely optional, but should be straightforward if you're comfortable around a command line.
 
-1. Install [Node.js](https://nodejs.org) if you don't have it already.
+1. Install [Node.js](https://nodejs.org) if you don't have it already
 2. Open up the [starter code](https://svelte.dev/repl/75f705a8650f4851bd2e172456d6dfcc?version=3) and download it using the link in the top right corner
-4. After unzipping the download, navigate to the project and install dependencies
+4. After unzipping the download, navigate to the project and install the dependencies
 
 ```bash
 npm install
@@ -48,15 +48,19 @@ npm install
 npm run dev
 ```
 
-Your dev server should now be up and running - all changes will be immediately updated in the browser.
+Your dev server should now be up and running - all changes to your files will be immediately updated in the browser.
 
-You can now go ahead and follow along by making changes to in your preferred text editor.
+You can now follow along by making changes in your preferred text editor.
+
+N.B. in this tutorial, I'll often omit some parts files in code snippets if that section is not changing. If you need to delete code, I'll let you know. Finished code for each section will be provided so you can always check what's there if you get lost.
+
+Let's get started!
 
 ## Overview
 
 ### What is Svelte?
 
-Svelte is a javascript component framework for building front-end web applications. What makes it different to other frameworks like React or Vue? Whereas other frameworks ship their entire libraries to the client, and translate your code on the fly, Svelte compiles at build time into a lightweight, fast, imperative, js bundle.
+Svelte is a javascript component framework for building front-end web applications. It allows you to easily build complex application out of isolated componentsWhat makes it different to other frameworks like React or Vue? Whereas other frameworks ship their entire libraries to the client, and translate your code on the fly, Svelte compiles at build time into a lightweight, fast, imperative, js bundle.
 
 An application built with Svelte is made up of isolated components that are found in `.svelte` files. Each file looks a lot like regular html and can contain up to three sections: `script`, `style` and/or regular `html`. From the svelte [docs](https://svelte.dev/docs#Component_format):
 
@@ -72,7 +76,7 @@ An application built with Svelte is made up of isolated components that are foun
 <!-- markup (zero or more items) goes here -->
 ```
 
-Just like in the React tutorial, lets take a look at what a simple shopping list component might look like in svelte.
+Just like in the React tutorial, lets take a look at what a simple shopping list component might look like in svelte, to get a feel for what a _real_ component looks like.
 
 ```html
 <!-- Filename: `ShoppingList.svelte` -->
@@ -89,19 +93,43 @@ Just like in the React tutorial, lets take a look at what a simple shopping list
   <li>Oculus</li>
   </ul>
 </div>
-
-<!-- Example usage: <ShoppingList name="Mark" /> -->
 ```
 
-The usage is syntactically identical to it's React counterpart however the declaration is a little different.
+Any 'props' that are declared and exposed in the `<script />` tag are available to the markdown below, by wrapping them in curly brackets `{}`.
 
-Any 'props' get declared and exposed in the `<script />` tag. These variables are available to the markdown below, by wrapping them in curly brackets `{}`.
+Using a component is done in the same way as React, by importing it and using it like a html element.
+
+```html
+<script>
+  import ShoppingList from "./";
+</script>
+
+<ShoppingList name="Mark" />
+```
+
+When a component is created, the props can be passed down by setting them in the tags, similar to how you would set an attribute. Props can be any js type, so you can pass in a whole object containing all props or break them down as you need. Just remember to handle them correctly in the child.
+
+Svelte also has a handy shortcut which React doesn't currently have. If the name of the prop is the same as the variable you're using you can omit part of the declaration.
+
+```html
+<script>
+  import ShoppingList from "./";
+
+  const name = "Mark";
+</script>
+
+<ShoppingList { name } /> <!-- identical to <ShoppingList name="Mark" /> -->
+```
+
+Handy!
 
 The shopping list example above only contains standard HTML elements however it can be composed of other Svelte components allowing us to build up complex UI from simple components with single responsibilities.
 
 This example also doesn't contain any styling. In Svelte, each component is responsible for styling itself. At compile time, elements targeted by styles are given a unique hash corresponding to their styles. This is how Svelte is able to surgically target DOM elements and avoid styles unintentinally leaking into other components.
 
 ### Inspecting the Starter Code
+
+Lets take a quick walkthrough of what we're going to be starting with.
 
 If you're following along in the browser, simply open up the starter [code](https://svelte.dev/repl/75f705a8650f4851bd2e172456d6dfcc?version=3.15.0). If you're working locally, open up the `src` directory and we'll take a quick tour.
 
@@ -115,7 +143,7 @@ Finally, `Square.svelte` renders a single button.
 
 ### Passing Data Through Props
 
-To get started, lets try passing data down from the board to our Square components.
+Lets try passing data down from the board to our Square components.
 
 Update the script and markdown sections in `Square.svelte` so that the component accepts a prop corresponding to its board position and displays it inside the button
 
@@ -137,19 +165,19 @@ Next we need to update our Board to pass in the corresponding indexes.
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-  <Square value={ 0 }/>
-  <Square value={ 1 }/>
-  <Square value={ 2 }/>
+    <Square value=0 />
+    <Square value=1 />
+    <Square value=2 />
   </div>
   <div class="board-row">
-  <Square value={ 3 }/>
-  <Square value={ 4 }/>
-  <Square value={ 5 }/>
+    <Square value=3 />
+    <Square value=4 />
+    <Square value=5 />
   </div>
   <div class="board-row">
-  <Square value={ 6 }/>
-  <Square value={ 7 }/>
-  <Square value={ 8 }/>
+    <Square value=6 />
+    <Square value=7 />
+    <Square value=8 />
   </div>
 </div>
 ```
@@ -193,7 +221,7 @@ To add 'state' to our `Square` component. Make the following changes to the scri
   let value;
 
   const unsubscribe = store.subscribe(val => {
-  value = val;
+    value = val;
   });
 </script>
 
@@ -208,26 +236,26 @@ import { writable } from 'svelte/store';
 
 Here we import a writable (think 'editable') store. The store is an object with three methods: subscribe, set, and update.
 
+Next up we create our store object and set an empty string as the initial state.
+
 ```js
 const store = writable('');
 ```
 
-Next up we create our store object and set an empty string as the initial state.
+To make our value 'reactive' we call the subscribe function on our store. Whenever the store now changes, the function we pass in to the subscribe function will run. In this case, we'll update our value so that it stays in sync with the store's state but you can do whatever you like here. Note that the subscribe function returns an unsubscribe function which can be used to stop listening to changes. We won't be using this in this tutorial so this can be ignored for now.
 
 ```js
 let value;
 const unsubscribe = store.subscribe(state => {value = state;});
 ```
 
-To make our value 'reactive' we call the subscribe function on our store. Whenever the store changes, the function we pass in to the subscribe function will run. In this case, we'll update our value so that it stays in sync with the store but you can do whatever you like here.
+Finally, in our button we call the `store.set()` function when the button gets clicked. This will set the state for us and since our `value` variable is subscribed to the store, it will automatically update and display an "X"! Try it out for yourself!
 
 ```html
 <button on:click="{ () => store.set('X') }">{ value }</button>
 ```
 
-Finally, we call the `store.set()` function when the button gets clicked. This will set the state for us and since our value is subscribed, it will automatically update and display an "X"! Try it out for yourself!
-
-Now, since this is such a common pattern, the lovely Svelte folks have given us a shorthand to automatically subscribe to a store. All you have to do is add a `$` to the variable inside your component. The below code is equivalent to the above. Much better.
+Now, since this is such a common pattern, the lovely Svelte folks have given us a shorthand to automatically subscribe to a store. All you have to do is add a `$` to the variable inside your component. The below code is equivalent to the above.
 
 ```html
 <script>
@@ -301,19 +329,19 @@ Lastly, we need to update our Squares so that they take in our new state and cli
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square onClick="{() => handleClick(0)}" value={$board[0]}/>
-    <Square onClick="{() => handleClick(1)}" value={$board[1]}/>
-    <Square onClick="{() => handleClick(2)}" value={$board[2]}/>
+    <Square onClick="{ () => handleClick(0) }" value="{ $board[0] }"/>
+    <Square onClick="{ () => handleClick(1) }" value="{ $board[1] }"/>
+    <Square onClick="{ () => handleClick(2) }" value="{ $board[2] }"/>
   </div>
   <div class="board-row">
-    <Square onClick="{() => handleClick(3)}" value={$board[3]}/>
-    <Square onClick="{() => handleClick(4)}" value={$board[4]}/>
-    <Square onClick="{() => handleClick(5)}" value={$board[5]}/>
+    <Square onClick="{ () => handleClick(3) }" value="{ $board[3] }"/>
+    <Square onClick="{ () => handleClick(4) }" value="{ $board[4] }"/>
+    <Square onClick="{ () => handleClick(5) }" value="{ $board[5] }"/>
   </div>
   <div class="board-row">
-    <Square onClick="{() => handleClick(6)}" value={$board[6]}/>
-    <Square onClick="{() => handleClick(7)}" value={$board[7]}/>
-    <Square onClick="{() => handleClick(8)}" value={$board[8]}/>
+    <Square onClick="{ () => handleClick(6) }" value="{ $board[6] }"/>
+    <Square onClick="{ () => handleClick(7) }" value="{ $board[7] }"/>
+    <Square onClick="{ () => handleClick(8) }" value="{ $board[8] }"/>
   </div>
 </div>
 ```
@@ -324,26 +352,35 @@ Now each Square takes in a function and a board position relating to it's positi
 
 
 ### Custom Stores
-Great right? Well, there is a little repetition here. In React we could clean up a little by declaring a `renderSquare` function which returns a component for us. Just pass in the index and it does the rest for us. Like this:
 
-```js
+Great right? Well, there is a little repetition here. We need to add the board index value _twice_ in the Square props. Not a huge problem right here but imagine if we accidentally passed mismatching integers to the arguments? Not good, we'd rather not repeat ourselves.
+
+In React we could clean up by declaring a `renderSquare` function which returns a component for us. Just pass in the index and it does the rest for us. Like this:
+
+```jsx
   renderSquare(index) {
-  return (
-    <Square
-    value={this.state.squares[index]}
-    onClick={() => this.handleClick(index)}
-    />
-  );
+    return (
+      <Square
+        value={this.state.squares[index]}
+        onClick={() => this.handleClick(index)}
+      />
+    );
   }
 ```
 
-Unfortunately, Svelte doesn't support render functions and we have to find other ways to streamline our code. What if there was a more 'Svelte-ish' way?
+Nifty.
 
-What if we could move all our game state out of our components and into a specialised store, accessible from anywhere?
+Unfortunately, Svelte doesn't support render functions and we have to find other ways to streamline our code.
 
-Stores in Svelte are simple but incredibly powerful objects. We can use them to decouple our components from data and allow interested parties to keep track of their contents. In our game, we can set up a custom store representing our game state and add some basic operations to assist us.
+What if we could move all our game state out of our components and into a specialised, always in sync store, accessible from anywhere?
 
-To get us going, we need to create a new file in our `src` directory. You can name it whatever you like but I'm going to refer to it as `stores.js`. This will contain our custom store.
+We've seen a store before. Back when we made out button interactive. In that example we only accessed the store from one component and made very minimal changes.
+
+We can do more. Stores in Svelte quite powerful objects that provide an easy way to manage state between components. We can actually import the same store in multiple places and they'll all subscribe to the same global store object. This means they'll all get updates immediately when something changes, and if necessary, can modify the state when needed!
+
+We can use them to easily decouple our components from our data. In our game, we can set up a custom store representing our game state and add some basic operations to assist us.
+
+To get us going, we need to create a new file in our `src` directory to contain our custom store. You can name it whatever you like but I'm going to refer to it as `stores.js`. This will contain our custom store.
 
 Insert the following into the store
 
@@ -351,7 +388,7 @@ Insert the following into the store
 import { writable } from 'svelte/store';
 
 const defaultStore = {
-	board: Array(9).fill('')
+  board: Array(9).fill('')
 }
 
 function createStore() {
@@ -360,37 +397,39 @@ function createStore() {
   return {
     subscribe,
     move: index => update(store => {
-			let newBoard = store.board.slice();
-			newBoard[index] = 'X';
-			return Object.assign({}, store, {board: newBoard})
-		}),
+      let newBoard = store.board.slice();
+      newBoard[index] = 'X';
+      return Object.assign({}, store, {board: newBoard})
+    }),
   };
 }
 
 export const store = createStore();
 ```
 
-Here we have an implementation of a small custom store. We are exporting an object with two methods: `subscribe`, and `move`. Note that we're now storing an object _containing_ our board state instead of the board state directly. This approach allows us to easily add other entries to our state in future.
+Here we have an implementation of a small custom store. We are exporting an object with two methods: `subscribe`, and `move`. We could just export the update function directly but then the calling site would need to worry about how to update the state. This way, the subscribee just has to tell the store which cell should be updated.
 
-Now, there are a number of ways to use this new store and it can be imported wherever it is useful. I played around with a few approaches and landed on an implementation where the `Board` passes the `Square` it's index in the board and the `Square` looks itself up from the store.
+Note that we're now storing an object _containing_ our board state instead of the board state directly. Check out `defaultStore`. This approach allows us to easily add other entries to our state in future.
 
-Import the store into the `Square`
+There are a number of ways to use this new store and it can be imported wherever it is useful. In building this tutorial I played around with a few approaches and landed on an implementation where the `Board` passes the `Square` it's index in the board and the `Square` _looks itself up_ from the store.
+
+To get started, import the store into `Square`
 
 ```html
 <script>
-	import { store } from './stores.js';
-	
+  import { store } from './stores.js';
+  
   export let index;
 </script>
 ```
 
-Now the markdown can access our custom store and it's methods just like we did before.
+Now the markdown can access our custom store and it's methods just like we did before. Update the markdown to call our move function on click and look itself up from the board to find it's display value.
 
 ```html
 <button on:click="{ () => store.move(index) }">{ $store.board[index] }</button>
 ```
 
-All thats left is to pass the index down to the `Squares`. Update your `Board` to look like this
+All thats left is to pass the index down to the `Squares`. Update your `Board` to look like this:
 
 ```html
 <script>
@@ -401,19 +440,19 @@ All thats left is to pass the index down to the `Squares`. Update your `Board` t
 <div>
   <div class="status">{status}</div>
   <div class="board-row">
-    <Square index=0/>
-    <Square index=1/>
-    <Square index=2/>
+    <Square index=0 />
+    <Square index=1 />
+    <Square index=2 />
   </div>
   <div class="board-row">
-    <Square index=3/>
-    <Square index=4/>
-    <Square index=5/>
+    <Square index=3 />
+    <Square index=4 />
+    <Square index=5 />
   </div>
   <div class="board-row">
-    <Square index=6/>
-    <Square index=7/>
-    <Square index=8/>
+    <Square index=6 />
+    <Square index=7 />
+    <Square index=8 />
   </div>
 </div>
 ```
@@ -433,24 +472,24 @@ We'll add a new boolean entry `xIsNext` to our store and update it each time a m
 import { writable } from 'svelte/store';
 
 const defaultStore = {
-	board: Array(9).fill(''),
-	xIsNext: true // <--
+  board: Array(9).fill(''),
+  xIsNext: true // <--
 }
 
 function createStore() {
-	const { subscribe, set, update } = writable(defaultStore);
+  const { subscribe, set, update } = writable(defaultStore);
 
-	return {
-		subscribe,
-		move: index => update(store => {
-			let newBoard = store.board.slice();
-			newBoard[index] = store.xIsNext ? 'X' : 'O'; // <--
-			return Object.assign({}, store, {
+  return {
+    subscribe,
+    move: index => update(store => {
+      let newBoard = store.board.slice();
+      newBoard[index] = store.xIsNext ? 'X' : 'O'; // <--
+      return Object.assign({}, store, {
         board: newBoard,
         xIsNext: !store.xIsNext // <--
       })
-		})
-	};
+    })
+  };
 }
 
 export const store = createStore();
@@ -458,7 +497,7 @@ export const store = createStore();
 
 Your game should now be showing "X"s and "O"s alternately. Awesome!
 
-Now let's update the status in so it shows the right player. We'll use the `$:` shorthand to let the Svelte compiler know that this variable is 'reactive' and should be updated each time the value it depends on changes.
+Now let's update the status in so it shows the right player. We'll use the `$:` shorthand to let the Svelte compiler know that this variable is 'reactive' and should be updated each time the value it depends on changes. In this case, it will update any time `store.xIsNext` updates. We'll also prefix this with a `$` so that Svelte will automatically subscribe to the store for us.
 
 ```html
 <script>
@@ -468,7 +507,7 @@ Now let's update the status in so it shows the right player. We'll use the `$:` 
   // ...
 </script>
 
-<div class="status">{status}</div>
+<div class="status">{ status }</div>
 <!-- ... -->
 ```
 
@@ -482,23 +521,23 @@ Add this helper function to `stores.js`.
 
 ```js
 export function calculateWinner(squares) {
-	const lines = [
-		[0, 1, 2],
-		[3, 4, 5],
-		[6, 7, 8],
-		[0, 3, 6],
-		[1, 4, 7],
-		[2, 5, 8],
-		[0, 4, 8],
-		[2, 4, 6],
-	];
-	for (let i = 0; i < lines.length; i++) {
-		const [a, b, c] = lines[i];
-		if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-			return squares[a];
-		}
-	}
-	return null;
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
 }
 ```
 
@@ -582,16 +621,16 @@ history = [
 ]
 ```
 
-As an array, we can easily move through the history by simply setting the most current board to a particular index in the list. The most recent board is simply the last in the list.
+As an array, we can easily move through the history by simply setting the most current board to a particular index in the list. Without time travel, the most recent board is simply the last in the list.
 
 Update `defaultBoard` to this
 
 ```js
 const defaultBoard = {
-	history: [{
-		board: Array(9).fill('')
-	}]
-	xIsNext: true
+  history: [{
+    board: Array(9).fill('')
+  }]
+  xIsNext: true
 }
 ```
 
@@ -599,26 +638,26 @@ This will break our game because the store expects a one dimensional board not a
 
 ```js
 function createStore() {
-	const { subscribe, set, update } = writable(defaultBoard);
+  const { subscribe, set, update } = writable(defaultBoard);
 
-	return {
-		subscribe,
-		move: index => update(store => {
-			const current = store.history[store.history.length - 1];
-			if (calculateWinner(current.board) || current.board[index]) {
-				return store;
-			}
-			let newBoard = current.board.slice();
-			newBoard[index] = store.xIsNext ? 'X' : 'O';
-			return Object.assign({}, store, {
-				history: store.history.concat([{
-					board: newBoard
-				}]), 
-				xIsNext: !store.xIsNext
-			})
-		}),
-		reset: () => set(defaultBoard)
-	};
+  return {
+    subscribe,
+    move: index => update(store => {
+      const current = store.history[store.history.length - 1];
+      if (calculateWinner(current.board) || current.board[index]) {
+        return store;
+      }
+      let newBoard = current.board.slice();
+      newBoard[index] = store.xIsNext ? 'X' : 'O';
+      return Object.assign({}, store, {
+        history: store.history.concat([{
+          board: newBoard
+        }]), 
+        xIsNext: !store.xIsNext
+      })
+    }),
+    reset: () => set(defaultBoard)
+  };
 }
 ```
 
@@ -653,9 +692,9 @@ Now we need to update our components to read from the new history.
 ```html
 <script>
   import { store } from './stores.js';
-	
+  
   export let index;
-	
+  
   $: current = $store.history[$store.history.length - 1]
   $: value = current.board[index];
 </script>
@@ -693,17 +732,19 @@ store.subscribe(store => {
 });
 ```
 
-Delete status from `Board`
+Delete the status div from `Board`
 
 ```html
-<div class="status">{status}</div>
+<div class="status">{ status }</div>
 ```
 
-and add to `App` in place of `<!-- TODO: status -->`. TODO CSS SELECTOR
+and add to `App` in place of `<!-- TODO: status -->`.
 
 ```html
-<div>{status}</div>
+<div>{ status }</div>
 ```
+
+n.b. at this point, you might get a complaint from your runner/compiler due to an unused css selector in `Board.svelte`. We can go ahead and delete this selector as it is no longer needed.
 
 ### Showing the Past Moves
 
@@ -733,11 +774,11 @@ First of all, we need to add `stepNumber` to the store to indicate the board sta
 
 ```js
 const defaultBoard = {
-	history: [{
-		board: Array(9).fill('')
-	}],
-	xIsNext: true,
-	stepNumber: 0
+  history: [{
+    board: Array(9).fill('')
+  }],
+  xIsNext: true,
+  stepNumber: 0
 }
 ```
 
