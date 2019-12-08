@@ -51,7 +51,7 @@ export default {
       "from": "06/18",
       "to": "06/19",
       "details": [
-        "Sole engineer developing and maintaining Sidekicker's end-to-end QA testing suite", 
+        "Developing and maintaining Sidekicker's end-to-end QA testing suite", 
         "Integrated over 300 test scenarios into Sidekicker's CI/CD pipeline"
       ]
     },
