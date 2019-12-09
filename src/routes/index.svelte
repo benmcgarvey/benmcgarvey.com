@@ -28,6 +28,16 @@
   <meta
     name="description"
     content="Ben McGarvey - Software Engineer. Not the singer..." />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154237194-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154237194-1');
+  </script>
+
 </svelte:head>
 
 <ContentContainer>
