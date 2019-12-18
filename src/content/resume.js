@@ -133,34 +133,31 @@ export default {
       "list": [
         "JS",
         "PHP",
-        "Java",
+        "SQL",
         "Python",
-        "Kotlin",
         "Java",
-        "C#",
-        "MySQL"
+        "Kotlin",
+        "C#"
       ]
     },
     {
       "name": "frameworks",
       "list": [
-        "React.js",
+        "React",
         "GraphQL",
         "Cypress",
         "Laravel",
-        "Pandas",
-        "Numpy",
-        "Android SDK"
+        "Svelte",
+        "Node",
+        "Pandas"
       ]
     },
     {
       "name": "services",
       "list": [
         "AWS (ECS, EC2, S3, RDS, IAM)",
-        "Redis",
         "Docker",
-        "Git",
-        "Periscope Data"
+        "Git"
       ]
     },
     {
