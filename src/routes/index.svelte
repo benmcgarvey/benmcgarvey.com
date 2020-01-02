@@ -25,24 +25,11 @@
 
 <svelte:head>
   <title>Ben McGarvey | Home</title>
-  <meta
-    name="description"
-    content="Ben McGarvey - Software Engineer. Not the singer..." />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154237194-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-154237194-1');
-  </script>
-
 </svelte:head>
 
 <ContentContainer>
   <h1>Hi, I'm Ben McGarvey</h1>
-  <p>I'm a Software Engineer from Melbourne, Australia</p>
+  <p>I'm a Software Engineer, currently working in Melbourne, Australia</p>
   <p>Welcome to my website!</p>
   <p>
     Here you'll find some
@@ -50,7 +37,7 @@
     , some
     <a href="/work">things I've done</a>
     , and some
-    <a href="/contact">links to find out more</a>
-    .
+    <a href="/contact">ways to get in touch</a>.
   </p>
+  <p>I'm working on a move to NYC right now and open to new opportunities there. Feel free to <a href="/contact">drop me a line</a> if you'd like to chat about it!</p>
 </ContentContainer>

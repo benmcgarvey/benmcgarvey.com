@@ -20,6 +20,9 @@
 
 <svelte:head>
   <title>Ben McGarvey | {post.metadata.title}</title>
+  <meta
+    name="description"
+    content={post.metadata.metaDescription} />
   <link rel="stylesheet" href="nord.css" />
 </svelte:head>
 

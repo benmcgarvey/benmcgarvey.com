@@ -3,13 +3,14 @@ title: The First Post
 date: 2019-09-04T02:00:00+10:00
 edited: 2019-11-28T00:48:00+10:00
 draft: false
+metaDescription: Why should you start a blog as a Software Engineer? It's a place to practice your skills and learn about new technologies. Get started now!
 ---
 
 Welcome to the first post in my Blog!
 
 ## Why start a blog?
 
-I want to start a blog because I want to have a place to call my own on the internet. A place where I can do whatever I like. It's a place to share things I've learnt, things I've done or things that I think are interesting. In a longer and more flexible format than a twitter account. 
+I want to start a blog because I want to have a place to call my own on the internet. A place where I can do whatever I like. It's a place to share things I've learnt, things I've done or things that I think are interesting. In a longer and more flexible format than a twitter account.
 
 As an engineer a handmade blog is especially exciting because it's something which I can craft using the skills of my trade. It's sort of like a personal workshop. It's a place where I can practice my craft, hone my skills, or experiment and try out new things. There are no consequences, no customers, no deadlines.
 
