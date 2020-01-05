@@ -25,6 +25,9 @@
 
 <svelte:head>
   <title>Ben McGarvey | Home</title>
+  <meta
+    name="description"
+    content="Website of Ben McGarvey -Full Stack Software Engineer. Visit to learn more, read some articles and get in touch." />
 </svelte:head>
 
 <ContentContainer>
