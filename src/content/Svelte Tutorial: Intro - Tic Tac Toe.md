@@ -63,7 +63,7 @@ Let's get started!
 
 Svelte is a javascript component framework for building front-end web applications. It allows you to easily build complex application out of isolated components. What makes it different to other frameworks like React or Vue? Whereas other frameworks ship their entire libraries to the client, and translate your code on the fly, Svelte compiles at build time into a lightweight, fast, imperative, js bundle.
 
-An application built with Svelte is made up of isolated components that are found in `.svelte` files. Each file looks a lot like regular html and can contain up to three sections: `script`, `style` and/or regular `html`. From the svelte [docs](https://svelte.dev/docs#Component_format):
+An application built with Svelte is made up of isolated components that are found in `.svelte` files. Each file looks a lot like regular html and can contain up to three sections: `script`, `style` and/or regular `html`. From the Svelte [docs](https://svelte.dev/docs#Component_format):
 
 ```html
 <script>
@@ -98,7 +98,7 @@ Just like in the React tutorial, lets take a look at what a simple shopping list
 
 Any 'props' that are declared and exposed in the `<script />` tag are available to the markdown below, by wrapping them in curly brackets `{}`.
 
-Using a component is done in the same way as React, by importing it and using it like a html element.
+Using a component is done in the same way as React, by importing it and using it like a HTML element.
 
 ```html
 <script>
@@ -135,7 +135,7 @@ Lets take a quick walkthrough of what we're going to be starting with.
 
 If you're following along in the browser, simply open up the starter [code](https://svelte.dev/repl/75f705a8650f4851bd2e172456d6dfcc?version=3.15.0). If you're working locally, open up the `src` directory and we'll take a quick tour.
 
-`main.js` contains the renderer function for our app. This simply imports a top level component and inserts it into the DOM at the target we give it. In this case we're targeting the body. You can find the base html file at `public/index.html`.
+`main.js` contains the renderer function for our app. This simply imports a top level component and inserts it into the DOM at the target we give it. In this case we're targeting the body. You can find the base HTML file at `public/index.html`.
 
 `App.svelte` is the container for our game. It imports the `Board` from `Board.svelte` and renders it down there on line 22.
 
