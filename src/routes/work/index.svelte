@@ -113,7 +113,7 @@
   <title>Ben McGarvey | Work</title>
   <meta
     name="description"
-    content="Ben McGarvey is a full-stack Software Engineer working with modern web frameworks, backend technologies, and devOps. Visit to learn more, read some articles and get in touch." />
+    content="Website of Ben McGarvey -Full Stack Software Engineer. Visit to learn more, read some articles and get in touch." />
 </svelte:head>
 <ContentContainer>
   <div class="nav no-print" in:fly={{ y: -100, duration: 400 }}>

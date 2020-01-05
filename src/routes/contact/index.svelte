@@ -9,7 +9,7 @@
   <title>Ben McGarvey | Contact</title>
   <meta
     name="description"
-    content="Ben McGarvey is a full-stack Software Engineer working with modern web frameworks, backend technologies, and devOps. Visit to learn more, read some articles and get in touch." />
+    content="Website of Ben McGarvey -Full Stack Software Engineer. Visit to learn more, read some articles and get in touch." />
 </svelte:head>
 <ContentContainer>
   <Contact contacts={resume.contacts} />
