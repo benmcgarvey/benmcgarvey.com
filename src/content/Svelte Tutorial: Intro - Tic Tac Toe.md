@@ -61,7 +61,7 @@ Let's get started!
 
 ### What is Svelte?
 
-Svelte is a javascript component framework for building front-end web applications. It allows you to easily build complex application out of isolated componentsWhat makes it different to other frameworks like React or Vue? Whereas other frameworks ship their entire libraries to the client, and translate your code on the fly, Svelte compiles at build time into a lightweight, fast, imperative, js bundle.
+Svelte is a javascript component framework for building front-end web applications. It allows you to easily build complex application out of isolated components. What makes it different to other frameworks like React or Vue? Whereas other frameworks ship their entire libraries to the client, and translate your code on the fly, Svelte compiles at build time into a lightweight, fast, imperative, js bundle.
 
 An application built with Svelte is made up of isolated components that are found in `.svelte` files. Each file looks a lot like regular html and can contain up to three sections: `script`, `style` and/or regular `html`. From the svelte [docs](https://svelte.dev/docs#Component_format):
 
