@@ -1,6 +1,5 @@
 <script>
-  export let from;
-  export let to;
+  export let date;
 </script>
 
 <style>
@@ -11,6 +10,7 @@
     -moz-hyphens: none;
     hyphens: none;
   }
+
   div {
     flex: 0 0 var(--date-block-width);
     padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
@@ -24,17 +24,8 @@
     display: block;
   }
 
-  div span:nth-child(2)::before {
-    position: relative;
-    top: 1pt;
-    right: 5.5pt;
-    display: block;
-    height: 10pt;
-    content: "|";
-  }
 </style>
 
 <div>
-  <span>{to}</span>
-  <span>{from}</span>
+  <span>{date}</span>
 </div>

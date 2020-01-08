@@ -8,7 +8,6 @@
   export let location;
   export let details;
   export let from;
-  export let to;
 </script>
 
 <style>
@@ -26,7 +25,7 @@
 </style>
 
 <section>
-  <Date {from} {to} />
+  <Date date={from} />
   <Decorator />
   <Details {title} {place} {location} {details} />
 </section>

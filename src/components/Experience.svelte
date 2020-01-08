@@ -123,11 +123,13 @@
 
   </header>
   <div class="dates" />
-  <div class="details">
-    <ul>
-      {#each details as detail}
-        <li>{detail}</li>
-      {/each}
-    </ul>
-  </div>
+  {#if details}
+    <div class="details">
+      <ul>
+        {#each details as detail}
+          <li>{detail}</li>
+        {/each}
+      </ul>
+    </div>
+  {/if}
 </div>

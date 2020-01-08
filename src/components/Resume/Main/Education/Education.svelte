@@ -13,7 +13,7 @@
     hyphens: none;
   }
   section {
-    margin-top: 0.1in;
+    margin-top: 0.3in;
   }
 
   h2 {

@@ -20,7 +20,7 @@
   section {
     float: left;
     width: 6in;
-    padding: 1in 0.25in 0.5in 0.5in;
+    padding: 1.4in 0.25in 0.5in 0.5in;
     font-size: 7pt;
   }
 </style>

@@ -12,6 +12,9 @@
     -moz-hyphens: none;
     hyphens: none;
   }
+  section {
+    padding-top: .2in;
+  }
   h2 {
     text-transform: uppercase;
     position: relative;

@@ -69,11 +69,13 @@
     <span class="location">{location}</span>
     <span class="location icon-location" />
   </header>
-  <div class="details">
-    <ul>
-      {#each details as detail}
-        <li>{detail}</li>
-      {/each}
-    </ul>
-  </div>
+  {#if details}
+    <div class="details">
+      <ul>
+        {#each details as detail}
+          <li>{detail}</li>
+        {/each}
+      </ul>
+    </div>
+  {/if}
 </div>

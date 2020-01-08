@@ -40,14 +40,15 @@
   li {
     list-style-type: none;
   }
+
 </style>
 
 <div>
   <h1>Skills</h1>
   <ul>
     {#each skills as skillGroup}
-      <ul>
-        <h2>{skillGroup.name}</h2>
+      <h2>{skillGroup.name}</h2>
+      <ul class="skillGroup">
         {#each skillGroup.list as skill}
           <li>{skill}</li>
         {/each}

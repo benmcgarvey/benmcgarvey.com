@@ -60,8 +60,8 @@
     position: absolute;
     height: 100px;
     width: 100px;
-    right: -50px;
-    top: 50px;
+    right: -100px;
+    top: 100px;
   }
 
   .printer {
