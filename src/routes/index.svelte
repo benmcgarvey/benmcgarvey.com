@@ -42,5 +42,6 @@
     , and some
     <a href="/contact">ways to get in touch</a>.
   </p>
-  <p>I'm working on a move to NYC right now and open to new opportunities there. Feel free to <a href="/contact">drop me a line</a> if you'd like to chat about it!</p>
+  <p>I'm working on a move to NYC right now and open to new opportunities there - I'll be there between the February 4th and March 17th on a job hunt.</p>
+  <p>Feel free to <a href="/contact">drop me a line</a> if you'd like to chat about it!</p>
 </ContentContainer>
