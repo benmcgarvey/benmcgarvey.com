@@ -116,6 +116,13 @@ export default {
       ]
     }
   ],
+  note: {
+    text:
+      'Note: I am eligible to work in the U.S. on an E-3 visa, which is a two-year visa available only to Australians and which can be renewed indefinitely. The process to obtain the visa is straightforward and is summarized ',
+    linkText: 'here',
+    href:
+      'https://static1.squarespace.com/static/5d24cbfb75f55e000100967f/t/5db43b192ca7a63a6d405c38/1572092697712/jonkarolczak.com+-+Summary+of+E-3+Visa+Process+for+Employers.pdf'
+  },
   skills: [
     {
       name: 'proficient languages',

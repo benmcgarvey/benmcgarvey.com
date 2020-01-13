@@ -3,12 +3,6 @@
   import Sidebar from "./Sidebar/Sidebar.svelte";
 
   export let resume;
-  const name = resume.name;
-  const title = resume.title;
-  const experiences = resume.experiences;
-  const education = resume.education;
-  const contacts = resume.contacts;
-  const skills = resume.skills;
 </script>
 
 <style>
@@ -55,6 +49,6 @@
 </style>
 
 <div class="resume">
-  <Main {name} {title} {experiences} {education} />
-  <Sidebar {contacts} {skills} />
+  <Main {...resume} />
+  <Sidebar {...resume} />
 </div>

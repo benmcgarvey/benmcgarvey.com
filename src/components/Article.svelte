@@ -9,8 +9,9 @@
 <style>
   h1 {
     margin-bottom: 5px;
-    font-size: 42px;
+    font-size: 3em;
   }
+
   .date {
     font-size: 14px;
     font-weight: 400;
@@ -39,20 +40,30 @@
   :global(article .body p) {
     font-size: 16px;
     margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  :global(article .body li p) {
+    margin-bottom: 0pc;
+    margin-top: 10px;
   }
 
   :global(article .body pre) {
     border-radius: 10px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: 768px) {
     :global(article .body pre) {
       margin: 0 -5px;
+      margin-bottom: 20px;
     }
   }
 
   :global(article .body h2) {
     margin-top: 44px;
+    font-size: 2em;
+    font-weight: 600;
   }
 
   :global(article .body h2 + h3) {
@@ -81,14 +92,23 @@
 
   :global(article .body h3) {
     margin-top: 33px;
+    margin-bottom: 0px;
+    font-size: 1.7em;
+    font-weight: 500;
   }
 
   :global(article .body h4) {
     margin-top: 28px;
+    margin-bottom: 0px;
+    font-size: 1.3em;
+    font-weight: 500;
   }
 
   :global(article .body h5) {
     margin-top: 26px;
+    margin-bottom: 0px;
+    font-size: 1.1em;
+    font-weight: 500;
   }
 </style>
 
@@ -97,9 +117,9 @@
     <h1>{title}</h1>
 
     {#if edited}
-      <h2 class="date">Edited: {new Date(edited).toDateString()}</h2>
+      <p class="date">Edited: {new Date(edited).toDateString()}</p>
     {:else}
-      <h2 class="date">Published: {new Date(date).toDateString()}</h2>
+      <p class="date">Published: {new Date(date).toDateString()}</p>
     {/if}
 
     <div class="body">

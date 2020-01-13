@@ -14,82 +14,82 @@ This is a short list of some tools I've found useful for getting an MVP of a web
 [Assets](/blog/hackathon-essentials/#assets)</br>
 [Information](/blog/hackathon-essentials/#information)</br>
 
-# Web app templates
+## Web app templates
 
-Making a new website from scratch in 2020 is awesome. There are lots of excellent framework and libraries to choose from - making building complex user experiences so much easier. I've gathered some basic, opinionated templates for some common web frameworks. Booting up one of these will give you a barebones web application with everything you need to start building something awesome.
+Making a new website from scratch in 2020 is awesome. There are many excellent frameworks and libraries to choose from - building complex user experiences has never been easier. I've gathered some basic, opinionated templates for some common web frameworks. Booting up one of these will give you a barebones web application with everything you need to start building something awesome.
 
-## [React](https://reactjs.org/)
+### React - [reactjs.org](https://reactjs.org/)
 
 React is currently the most popular frontend framework in the market. You'll find lots of tutorials and guides so building a react app from scratch should be well supported.
 
-### [Create React App](https://create-react-app.dev/)
+- [Create React App](https://create-react-app.dev/)
 
-The 'official' way to start a new React project. Built and maintained by the React team, Create React App will build you a template project with all the bells and whistles you need to start a modern web application.
+  - The 'official' way to start a new React project. Built and maintained by the React team, Create React App will build you a template project with all the bells and whistles you need to start a modern web application.
 
-### [Nano React App](https://github.com/adrianmcli/nano-react-app)
+- [Nano React App](https://github.com/adrianmcli/nano-react-app)
 
-Create React App will give you _all_ the bells and whistles - maybe too many. If you don't need things like testing, or service workers, this template is for you. It's basically the same as Create React App but with everything you don't need stripped out. Use this if you just need the bare minimum.
+  - Create React App will give you _all_ the bells and whistles - maybe too many. If you don't need things like testing, or service workers, this template is for you. It's basically the same as Create React App but with everything you don't need stripped out. Use this if you just need the bare minimum.
 
-## [Vue](https://vuejs.org/)
+### Vue - [vuejs.org](https://vuejs.org/)
 
 Vue is the second most popular front end framework in 2020. It has excellent documentation and lots of support from its community. Building your MVP with Vue shouldn't be a problem.
 
-### [Create Vue App](https://github.com/vue-land/create-vue-app)
+- [Create Vue App](https://github.com/vue-land/create-vue-app)
 
-Whilst not the official way to build a new Vue app, Create Vue App works in a similar way to Create React App. It'll set you up with a pre-built placeholder app ready for you to build out your ideas.
+  - Whilst not the official way to build a new Vue app, Create Vue App works in a similar way to Create React App. It'll set you up with a pre-built placeholder app ready for you to build out your ideas.
 
-## [Svelte](https://svelte.dev/)
+### Svelte - [svelte.dev](https://svelte.dev/)
 
 Svelte is a relative newcomer to the frontend scene but has picked up great support from people who have used it. Documentation is lighter on the ground due to its relative newness but its simple nature makes it easy to pick up and build something quickly.
 
-### [Sapper](https://sapper.svelte.dev/)
+- [Sapper](https://sapper.svelte.dev/)
 
-Sapper is to Svelte what Create React App is to React. It will provide you with an opinionated, dev ready web app template ready to use. Similar to Create React App it supports things like testing and service workers out of the box.
+  - Sapper is to Svelte what Create React App is to React. It will provide you with an opinionated, dev ready web app template ready to use. Similar to Create React App it supports things like testing, service workers and even PWA out of the box.
 
-### [Skirmisher](https://github.com/benmcgarvey/skirmisher)
+- [Skirmisher](https://github.com/benmcgarvey/skirmisher)
 
-Skirmisher is to Sapper what Nano React App is to Create React App. Confused yet? Skirmisher is slimmed down Sapper. \*disclaimer\* I made this template myself as a minimal template for building lightweight web apps. Skirmisher doesn't do a lot and mostly gets out of your way. The result is an extremely quick and lightweight web app. Give it a try!
+  - \*disclaimer\* I adapted this myself from the regular svelte [template](https://github.com/sveltejs/template) as a minimal boilerplate for building lightweight web projects. Skirmisher doesn't do a lot and mostly gets out of your way. The result is an extremely quick and lightweight web app.
 
-# Hosting
+## Hosting
 
 So, you've built your website and its working great on your local machine. How do you share it with your friends/teammates/colleagues/judges? Here are two very simple ways to get a public domain for your project.
 
-## [ngrok](https://ngrok.com/)
+### ngrok - [ngrok.com](https://ngrok.com/)
 
-"Secure introspectable tunnels to localhost" - AKA, use your machine as the server! ngrok is amazing, more people need to know about it. Ngrok takes your `localhost:3000` address and gives it an accessible public URL. No provisioning of services on AWS, no pushing to a remote server - just `ngrok https <YOUR_LOCAL_PORT>` and done.
+"Secure introspectable tunnels to localhost" - AKA, use your machine as the server! ngrok takes your `localhost:3000` address where your app is hosted locally exposes it on a public URL. No provisioning of services on AWS, no pushing to a remote server - just `ngrok https <YOUR_LOCAL_PORT>` and done.
 
-## [Github Pages](https://pages.github.com/)
+### Github Pages - [pages.github.com](https://pages.github.com/)
 
 Now, the trouble with ngrok is that it will only live as long as your computer is forwarding the port and at some point you might want to go home. Github pages is a totally free static site server which you can use to host your new web app. All of the frameworks mentioned earlier have an option to build a static version of the site. Simply take the generated files and pop them in the repository. Set up is a breeze and new deployments are as simple as pushing to master - github will give you a `.github.io` url, handle routing, 404s and even give you HTTPS for free.
 
-# Mocking
+## Mocking
 
 Alright, the website is up and running, we've got a static site with a URL, what's next? We want to be able to serve dynamic content. What's the fun in just making a static site? For that, we need an API. But wait, we don't have an API! Maybe one part of your team is working on the API and the other part wants to get on with the UI. Here is where mocking comes in. Sometimes you just have to fake it until you make it.
 
-## [Mocky](https://www.mocky.io/)
+### Mocky - [mocky.io](https://www.mocky.io/)
 
 Mocky allows you to generate a unique url from which you can return any response you like. Don't wait for a database to get set up, just decide what the data should look like and mock it out. Mocky will return whatever response you tell it to regardless of the HTTP method (e.g. POST, GET, DELETE etc).
 
-## [Mockable.io](https://www.mockable.io/)
+### Mockable - [mockable.io](https://www.mockable.io/)
 
-Mocky is simple and effective but it has it's downside. You get a new URL for every response you mock meaning you'll need to hardcode these into your app. Mockable however, gives you a single root url then allows you to mock out particular endpoints and HTTP methods. Swapping this out for your real API is as simple as swapping out the root URL.
+Mockable gives you a single root url and allows you to mock out particular endpoints and HTTP methods. This is in contrast to Mocky, where you get a new URL for every response you mock, meaning you'll need to hardcode these into your app. Swapping out mockable.io for your real API is as simple as swapping out the root URL.
 
-# Database
+## Database
 
 - EasyDb
 - Firebase
 
-# File sharing
+## File sharing
 
 - Github
 - Firefox Send
 
-# Assets
+## Assets
 
 - unsplash
 - unsplash API
 
-# Information
+## Information
 
 - mdn docs
 - devDocs
