@@ -5,11 +5,6 @@
 </script>
 
 <style>
-  @media print {
-    p {
-      display: none !important;
-    }
-  }
   p {
     font-size: 1.3em;
     margin-top: auto;
