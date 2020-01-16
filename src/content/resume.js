@@ -13,14 +13,14 @@ export default {
       display: 'github.com/benmcgarvey'
     },
     {
-      name: 'linkedin',
-      href: 'https://linkedin.com/in/bmcgarvey',
-      display: 'linkedin.com/in/bmcgarvey'
-    },
-    {
       name: 'email',
       href: 'mailto:hello@benmcgarvey.com',
       display: 'hello@benmcgarvey.com'
+    },
+    {
+      name: 'linkedin',
+      href: 'https://linkedin.com/in/bmcgarvey',
+      display: 'linkedin.com/in/bmcgarvey'
     },
     {
       name: 'phone',

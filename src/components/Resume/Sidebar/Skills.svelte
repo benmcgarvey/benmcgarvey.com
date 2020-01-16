@@ -1,5 +1,6 @@
 <script>
   export let skills;
+  export let skillSectionTitle = "skills";
 </script>
 
 <style>
@@ -40,11 +41,10 @@
   li {
     list-style-type: none;
   }
-
 </style>
 
 <div>
-  <h1>Skills</h1>
+  <h1>{skillSectionTitle}</h1>
   <ul>
     {#each skills as skillGroup}
       <h2>{skillGroup.name}</h2>

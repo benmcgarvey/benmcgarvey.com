@@ -4,6 +4,7 @@
 
   export let contacts;
   export let skills;
+  export let skillSectionTitle;
 </script>
 
 <style>
@@ -27,5 +28,5 @@
 
 <aside>
   <Contacts {contacts} />
-  <Skills {skills} />
+  <Skills {skills} {skillSectionTitle} />
 </aside>
