@@ -1,13 +1,13 @@
 <script>
-  import Resume from "../../components/Resume/Resume.svelte";
-  import Printer from "../../components/Resume/Shared/Printer.svelte";
-  import resume from "../../content/resume.js";
+  import Resume from "../components/Resume/Resume.svelte";
+  import Printer from "../components/Resume/Shared/Printer.svelte";
+  import resume from "../content/resume.js";
   import { fly } from "svelte/transition";
 
-  import ContentContainer from "../../components/ContentContainer.svelte";
-  import Experience from "../../components/Experience.svelte";
-  import Skill from "../../components/Skill.svelte";
-  import Note from "../../components/Resume/Note.svelte"
+  import ContentContainer from "../components/ContentContainer.svelte";
+  import Experience from "../components/Experience.svelte";
+  import Skill from "../components/Skill.svelte";
+  import Note from "../components/Resume/Note.svelte";
 
   let work = true;
 
@@ -90,7 +90,6 @@
     color: #729eb0;
   }
 
-  
   @media print {
     .no-print {
       display: none !important;
@@ -115,7 +114,8 @@
   <title>Ben McGarvey | Work</title>
   <meta
     name="description"
-    content="Website of Ben McGarvey - Full Stack Software Engineer. Visit to learn more, read some articles and get in touch." />
+    content="Website of Ben McGarvey - Full Stack Software Engineer. Visit to
+    learn more, read some articles and get in touch." />
 </svelte:head>
 <ContentContainer>
   <div class="nav no-print" in:fly={{ y: -100, duration: 400 }}>
