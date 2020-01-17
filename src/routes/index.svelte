@@ -33,7 +33,7 @@
 
 <ContentContainer>
   <h1>Hi, I'm Ben McGarvey</h1>
-  <p>I'm a Software Engineer, currently working in Melbourne, Australia</p>
+  <p>I'm a Software Engineer</p>
   <p>Welcome to my website!</p>
   <p>
     Here you'll find some
@@ -43,14 +43,5 @@
     , and some
     <a href="/contact">ways to get in touch</a>
     .
-  </p>
-  <p>
-    I'm working on a move to NYC right now and open to new opportunities there -
-    I'll be there between the February 4th and March 17th on a job hunt.
-  </p>
-  <p>
-    Feel free to
-    <a href="/contact">drop me a line</a>
-    if you'd like to chat about it!
   </p>
 </ContentContainer>

@@ -21,7 +21,7 @@
 
   .details {
     margin: 0.18in 0 0.1in 0;
-    padding-right: 110px;
+    padding-right: 90px;
     clear: both;
   }
 
