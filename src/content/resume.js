@@ -1,6 +1,7 @@
 export default {
   name: 'ben mcgarvey',
   title: 'software engineer',
+  summary: 'TODO',
   contacts: [
     {
       name: 'website',
@@ -25,7 +26,7 @@ export default {
     {
       name: 'phone',
       href: 'tel:+19177253106',
-      display: '+1 917 725 3106'
+      display: '(917) 725 3106'
     }
   ],
   experiences: [
@@ -109,9 +110,6 @@ export default {
       from: '06/16',
       to: '06/19',
       details: [
-        'Object Oriented Software Design, Declarative Programming',
-        'Algorithms & Data Structures, Database Design, Artificial Intelligence',
-        'Machine Learning, Models of Computation',
         'Notable projects: Adversarial AI, Tower Defence Game (Unity/C#), Android Application'
       ]
     }

@@ -76,13 +76,23 @@ Mockable gives you a single root url and allows you to mock out particular endpo
 
 ## Database
 
-- EasyDb
-- Firebase
+You've got a web app up and you've mocked out as much as you can but you're still missing a way to store information between sessions. Luckily there are loads of great solutions to hook up a database really quickly and start storing and utilising persistent data. No need to mess around with provisioning databases on AWS, these solutions should have you up and running in only a few clicks.
+
+### EasyDb - [easydb.io](https://easydb.io/)
+
+EasyDB is exactly what it sounds like - this is the absolute lowest entry point for persisting your data in an easy to use way. EasyDB gives you access to a free NoSQL DB for 24 hours with a unique key you can use to access it (if you sign up you'll get it for a whole month after that it'll cost you \$4.99/month to keep it running). They've got starter code in Javascript, Python, Ruby, and Bash so you can get started straight away.
+
+### Firebase Firestore [firebase.google.com](https://firebase.google.com/products/firestore/)
+
+Firebase is the big big brother of EasyDB. Its almost as easy to set up but comes with a lot more features out of the box. It comes with SDKs for Mobile and Web which provide things like client side caching, realtime data syncing, and authentication. You can set up cloud functions which contain your business logic, store static content like images, and even host your application. It also allows you more fine grained control over your database from their console so you can update and edit your schema after initialisation.
 
 ## File sharing
 
-- Github
-- Firefox Send
+Sharing files between your team will be essential. There are great solutions for text and csv data like google docs and google sheets. But what about sharing your code or bigger assets like images? These tools should help you manage some of these problems.
+
+### Github - [github.com](https://github.com/)
+
+### Firefox Send - [send.firefox.com](https://send.firefox.com/)
 
 ## Assets
 
