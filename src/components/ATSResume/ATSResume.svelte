@@ -1,4 +1,5 @@
 <script>
+  import Note from "../Resume/Note.svelte";
   export let resume = {};
   export let showSummary = false;
 
@@ -15,6 +16,10 @@
     --slim-margin: 1in;
   }
 
+  :global(p.Note) {
+    color: rgb(196, 146, 146);
+  }
+
   @page {
     size: letter portrait;
     margin: 0;
@@ -27,6 +32,7 @@
     -moz-hyphens: none;
     hyphens: none;
     font-weight: lighter;
+    font-size: 13px;
   }
 
   ul {
@@ -183,5 +189,7 @@
     {/each}
   </div>
   <!-- end Education section -->
+
+  <Note {...resume.note} />
 
 </div>
