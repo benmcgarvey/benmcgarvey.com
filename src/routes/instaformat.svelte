@@ -57,9 +57,11 @@
       return;
     }
 
-    const override = confirm(
-      "You're about to override an existing template, are you sure you want to proceed?"
-    );
+    const override = $storage.template
+      ? confirm(
+          "You're about to override an existing template, are you sure you want to proceed?"
+        )
+      : true;
 
     if (!override) {
       alert("Your template has has not been saved.");
