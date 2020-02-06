@@ -87,11 +87,12 @@
 </script>
 
 <style>
-  .Container {
+  .Formatter {
     height: 100%;
     padding: 15px;
     display: flex;
     flex-flow: column;
+    justify-content: space-around;
     align-items: flex-start;
   }
 
@@ -164,6 +165,7 @@
     padding-bottom: 0;
     padding-left: 0px;
     padding-right: 0px;
+    background-color: transparent;
   }
 
   .Clear {
@@ -171,6 +173,7 @@
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+    background-color: transparent;
   }
 </style>
 
@@ -181,7 +184,7 @@
     content="Format your instagram captions. Add linebreaks easily!" />
 </svelte:head>
 <ContentContainer>
-  <div class="Container">
+  <div class="Formatter">
     <textarea
       value={maybeStorage}
       on:input={invalidateForm}
