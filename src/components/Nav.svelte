@@ -8,6 +8,7 @@
     { name: "home", href: "/" },
     { name: "blog", href: "/blog" },
     { name: "work", href: "/work" },
+    { name: "random", href: "/random" },
     { name: "contact", href: "/contact" }
   ];
 </script>
