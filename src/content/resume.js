@@ -26,7 +26,7 @@ export default {
     {
       name: 'phone',
       href: 'tel:+19177253106',
-      display: '(917) 725 3106'
+      display: '(347) 988-6914'
     }
   ],
   experiences: [
