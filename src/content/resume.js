@@ -25,7 +25,7 @@ export default {
     },
     {
       name: 'phone',
-      href: 'tel:+19177253106',
+      href: 'tel:+3479886914',
       display: '(347) 988-6914'
     }
   ],
