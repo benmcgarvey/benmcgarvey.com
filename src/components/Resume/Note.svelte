@@ -2,6 +2,7 @@
   export let text;
   export let linkText;
   export let href;
+  export let extraText;
 </script>
 
 <style>
@@ -33,4 +34,5 @@
 <p class="Note">
   {text}
   <a {href}>{linkText}</a>
+  {extraText || ''}
 </p>

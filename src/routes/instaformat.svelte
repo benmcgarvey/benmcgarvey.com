@@ -103,7 +103,7 @@
     height: 80%;
     margin-bottom: 15px;
     padding: 15px;
-    font-size: 2em;
+    font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     border: none;

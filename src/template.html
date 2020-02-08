@@ -1,41 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#333333" />
 
-	%sapper.base%
-	
-	<link rel='manifest' href='manifest.json'>
-	<link rel='icon' type='image/png' href='favicon.png'>
-	<style>
-		body, html, #app {
-			margin: 0;
-			font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-			font-size: 14px;
-			line-height: 1.5;
-			color: #333;
-			height: 100%;
-		}
+    %sapper.base%
 
-		#app {
-			display: flex;
-			flex-direction: column;
-		}
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      :root {
+        --page-width: 8.5in;
+        --page-height: 11in;
+        --page-margin: 0.7in;
+        --slim-margin: 0.7in;
+      }
 
-		@media print {    
-			.no-print, .no-print *
-			{
-				display: none !important;
-			}
-		}
-	</style>
-	%sapper.styles%
-	%sapper.head%
-</head>
-<body>
-	<div id="app">%sapper.html%</div>
-	%sapper.scripts%
-</body>
+      body,
+      html,
+      #app {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+        height: 100%;
+      }
+
+      #app {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media print {
+        .no-print,
+        .no-print * {
+          display: none !important;
+        }
+
+        body,
+        html,
+        #app {
+          size: letter portrait;
+        }
+      }
+    </style>
+    %sapper.styles% %sapper.head%
+  </head>
+  <body>
+    <div id="app">%sapper.html%</div>
+    %sapper.scripts%
+  </body>
 </html>

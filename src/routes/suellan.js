@@ -1,16 +1,11 @@
 export default {
   name: 'Suellan Leelawardana',
-  title: 'Risk Management Consultant (TBC)',
+  title: 'Risk Management Consultant',
   contacts: [
     {
       name: 'Phone (US)',
-      href: 'tel:+19176753078',
-      display: '+1 (917) 675 3078'
-    },
-    {
-      name: 'Phone (AU)',
-      href: 'tel:+61467666399',
-      display: '+61 0432 745 120'
+      href: 'tel:+16462494640',
+      display: '+1 (646) 249-4640'
     },
     {
       name: 'linkedin',
