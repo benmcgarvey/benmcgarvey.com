@@ -11,7 +11,7 @@
     * {
       display: initial;
     }
-    li {
+    div {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -23,20 +23,21 @@
       color: inherit;
       display: inline-block;
       text-decoration: none;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
     }
 
     a:visited {
       color: inherit;
     }
 
-    li:hover {
+    div:hover {
       background: #f4f4f4;
     }
   }
 </style>
 
-<li>
+<div>
   <a rel="prefetch" href={item.href}>{item.name}</a>
-</li>
+</div>

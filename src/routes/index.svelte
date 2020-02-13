@@ -12,6 +12,7 @@
   a {
     color: #729eb0;
     text-decoration: none;
+    margin-right: -4px;
   }
 
   a:hover {

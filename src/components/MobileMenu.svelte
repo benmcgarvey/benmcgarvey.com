@@ -15,7 +15,7 @@
     display: flex;
   }
 
-  ul {
+  .list {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -25,14 +25,13 @@
     top: 60px;
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 25px;
     background-color: #fff;
-    list-style-type: none;
     color: #333;
-    border-left: 0.5px solid rgba(36, 36, 36, 0.2);
-    border-bottom: 0.5px solid rgba(36, 36, 36, 0.2);
-    border-radius: 0 0 0 10px;
-    width: 55%;
+    background: #ffffff;
+    box-shadow: -5px 5px 5px #e9e9e9;
+    border-radius: 0 0 0 5px;
+    width: 150px;
   }
 
   .menu-mobile {
@@ -76,21 +75,17 @@
 <div class="menu-options">
   {#if toggleMenu}
     <div class="bottom">
-      <ul
+      <div
+        class="list left"
         on:click={() => (toggleMenu = false)}
-        class="left"
         transition:fade={{ duration: 100 }}>
         {#each menuItems as item}
           <MobileMenuItem {item} />
         {/each}
-      </ul>
+      </div>
     </div>
   {/if}
 </div>
-<button
-  on:click={handleClick}
-  on:blur={() => (toggleMenu = false)}
-  class="menu-mobile"
-  class:active={toggleMenu}>
+<button on:click={handleClick} class="menu-mobile" class:active={toggleMenu}>
   menu
 </button>
