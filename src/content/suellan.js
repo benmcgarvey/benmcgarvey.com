@@ -31,7 +31,7 @@ export default {
       to: 'present',
       details: [
         'Subject Matter Resource for enterprise risk management for First Line and Second Line functions',
-        'This has involved supporting clients to develop and sustain their enterprise risk management programs, including reviewing their risk monitoring and reporting approaches, risk appetite and tolerance definition, and designing intergrated risk management solutions',
+        'This has involved supporting clients to develop and sustain their enterprise risk management programs, including reviewing their risk monitoring and reporting approaches, risk appetite and tolerance definition, and designing integrated risk management solutions',
         'In this role I lead business development and sales, through building strategic relationships across multiple industries to secure future pipeline',
         'I also lead formalised employee performance management and professional development programs, for five employees within the Risk Advisory team'
       ]

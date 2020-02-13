@@ -3,14 +3,30 @@
   import { onMount } from "svelte";
   import { storage } from "./localStore.js";
 
+  let inputHeight;
+  let inputContainer;
+
   let maybeStorage = "";
 
   $: valid = false;
+
+  function getInnerHeight(elm) {
+    var computed = getComputedStyle(elm),
+      padding =
+        parseInt(computed.paddingTop) + parseInt(computed.paddingBottom);
+
+    return elm.clientHeight - padding;
+  }
 
   onMount(async () => {
     storage.useLocalStorage();
     maybeStorage = $storage.template || null;
     valid = $storage.template || false;
+
+    inputContainer = document.querySelector(".Input");
+    inputHeight = getInnerHeight(inputContainer);
+    inputContainer.style.height = `${inputHeight}px`;
+    console.log(inputContainer.style.minHeight);
   });
 
   function invalidateForm() {
@@ -98,11 +114,19 @@
     align-items: flex-start;
   }
 
+  .TextArea {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
   .Input {
     width: -webkit-fill-available;
-    height: 80%;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
     padding: 15px;
+    box-sizing: border-box;
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -187,11 +211,14 @@
 </svelte:head>
 <ContentContainer>
   <div class="Formatter">
-    <textarea
-      value={maybeStorage}
-      on:input={invalidateForm}
-      placeholder="Write your post here..."
-      class="Input" />
+    <div class="TextArea">
+      <textarea
+        value={maybeStorage}
+        on:input={invalidateForm}
+        placeholder="Write your post here..."
+        class="Input" />
+    </div>
+
     <div class="ButtonBar">
       <button class="Convert" on:click={convertAndCopy}>convert & copy</button>
       <div class="UtilityBar">
