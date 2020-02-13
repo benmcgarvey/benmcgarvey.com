@@ -90,12 +90,13 @@
   }
 
   function clearTemplate() {
-    const confirm = confirm(
+    const confirmed = confirm(
       "You're about to delete your saved template are you sure you want to proceed?"
     );
 
-    if (confirm) {
+    if (confirmed) {
       $storage = {};
+      const inputTextArea = document.querySelector(".Input");
       alert("Your saved template has been deleted.");
     } else {
       alert("Your saved template has not been deleted.");
