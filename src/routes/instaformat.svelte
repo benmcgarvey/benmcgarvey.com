@@ -26,7 +26,6 @@
     inputContainer = document.querySelector(".Input");
     inputHeight = getInnerHeight(inputContainer);
     inputContainer.style.height = `${inputHeight}px`;
-    console.log(inputContainer.style.minHeight);
   });
 
   function invalidateForm() {
