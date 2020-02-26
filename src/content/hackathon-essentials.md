@@ -2,6 +2,7 @@
 title: Hackathon Essentials
 date: 2020-02-26T09:00:00-05:00
 draft: false
+metaDescription: Learn which programming tools can help you win your next hackathon or get your next project off the ground. A shortlist of essential hackathon tools along with tips and tricks for getting going.
 ---
 
 This is a short list of some tools I've found useful for getting an MVP of a web application up and running as quickly as possible. I've tried to only consider tools which strike a balance between usefulness and usability - use-ful-ability? These should all help translate ideas into reality without getting in the way. 

@@ -2,8 +2,20 @@
   import ContentContainer from "./ContentContainer.svelte";
   export let posts;
 
+  const dateStrip = dateString => dateString.slice(0, 10).replace(/-/g, "");
+
   const sortPosts = posts =>
-    posts.sort((a, b) => (a.metadata.edited || a.metadata.date) < (b.metadata.edited || b.metadata.date));
+    posts
+      .map(post => {
+        console.log(post.metadata.edited || post.metadata.date);
+        return post;
+      })
+      .sort((a, b) => {
+        return (
+          dateStrip(a.metadata.edited || a.metadata.date) -
+          dateStrip(b.metadata.edited || b.metadata.date)
+        );
+      });
   const sortedPosts = sortPosts(posts);
 </script>
 
@@ -70,7 +82,9 @@
           <a class="link" rel="prefetch" href="blog/{post.slug}">
             <div class="title">{post.metadata.title}</div>
             <div class="date">
-              <span>{new Date(post.metadata.edited || post.metadata.date).toDateString()}</span>
+              <span>
+                {new Date(post.metadata.edited || post.metadata.date).toDateString()}
+              </span>
             </div>
           </a>
         </li>
