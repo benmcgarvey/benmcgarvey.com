@@ -1,10 +1,12 @@
 ---
 title: Hackathon Essentials
-date: 2019-12-12T21:00:00+10:00
-draft: true
+date: 2020-02-26T09:00:00-05:00
+draft: false
 ---
 
 This is a short list of some tools I've found useful for getting an MVP of a web application up and running as quickly as possible. I've tried to only consider tools which strike a balance between usefulness and usability - use-ful-ability? These should all help translate ideas into reality without getting in the way.
+
+## Contents
 
 [Web app templates](/blog/hackathon-essentials/#web-app-templates)</br>
 [Hosting](/blog/hackathon-essentials/#hosting)</br>
@@ -13,6 +15,9 @@ This is a short list of some tools I've found useful for getting an MVP of a web
 [File sharing](/blog/hackathon-essentials/#file-sharing)</br>
 [Assets](/blog/hackathon-essentials/#assets)</br>
 [Information](/blog/hackathon-essentials/#information)</br>
+
+</br>
+</br>
 
 ## Web app templates
 
@@ -82,7 +87,7 @@ You've got a web app up and you've mocked out as much as you can but you're stil
 
 EasyDB is exactly what it sounds like - this is the absolute lowest entry point for persisting your data in an easy to use way. EasyDB gives you access to a free NoSQL DB for 24 hours with a unique key you can use to access it (if you sign up you'll get it for a whole month after that it'll cost you \$4.99/month to keep it running). They've got starter code in Javascript, Python, Ruby, and Bash so you can get started straight away.
 
-### Firebase Firestore [firebase.google.com](https://firebase.google.com/products/firestore/)
+### Firebase Firestore - [firebase.google.com](https://firebase.google.com/products/firestore/)
 
 Firebase is the big big brother of EasyDB. Its almost as easy to set up but comes with a lot more features out of the box. It comes with SDKs for Mobile and Web which provide things like client side caching, realtime data syncing, and authentication. You can set up cloud functions which contain your business logic, store static content like images, and even host your application. It also allows you more fine grained control over your database from their console so you can update and edit your schema after initialisation.
 
@@ -92,14 +97,39 @@ Sharing files between your team will be essential. There are great solutions for
 
 ### Github - [github.com](https://github.com/)
 
+Github is a cloud platform for working with git repositories. Git repositories can hold anything but you'll likely be using them to manage your app's source code. There are other providers out there but giGithubthub is the most ubiquitous. You can make an account for free and host unlimited public and private repositories. You'll be limited to 3 collaborators on a private repository though, so if you're a team of more than 3, you'll have to make your project public.
+
 ### Firefox Send - [send.firefox.com](https://send.firefox.com/)
+
+Firefox Send lets you send files around securely without each party needing any accounts or special app. After uploading the files your sending, you get a link which you can share with anyone who needs it. You can set an expiry and even password protect the link so only people you want to, can get at the files.
 
 ## Assets
 
-- unsplash
-- unsplash API
+Make your landing page more exciting with professional visual assets!
+
+### Unsplash - [unsplash.com](https://unsplash.com)
+
+Unsplash is a repository of completely free, high quality digital images. Usually, these would be very expensive or if you just use google image search you'll find annoying watermarks on lots of great images. All images on Unsplash are tagged really well so you can easily search and find the images you need. Final note - although you are not obligated to, they do encourage you to credit the photographer if you do end up using one of their photos.
+
+### Unsplash API - [unsplash.com/developers](https://unsplash.com/developers)
+
+Don't want to download and store the images you need on your server/storage solution? Want to generate photos dynamically? Unsplash has your back. They have an excellent API, which they proudly declare they run unsplash.com on! If you have more nuanced needs than simply embedding a pretty hero image on your landing page, simply register a developer account and get going. You can search, list, and directly access photos and more. They even have SDKs for mobile platforms and popular languages.
 
 ## Information
 
-- mdn docs
-- devDocs
+Looking for more information? Got a difficult to pin down bug? These resources have extra information that should help your workflow especially when building something on the web.
+
+### MDN Web Docs - [developer.mozilla.org](https://developer.mozilla.org/en-US/)
+
+From their page description: "The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps." Couldn't be clearer! MDN Web Docs is an invaluable resource for anyone working on the web. You'll likely see them come up organically in search results for common topics but going straight to them is never going to be a waste of time. They have clear documentation with easy to understand examples for nearly everything you can do in a web browser. They can even (teach you web development)[https://developer.mozilla.org/en-US/docs/Learn]!
+
+
+### DevDocs - [devdocs.io](https://devdocs.io/)
+
+Working with languages outside of HTML and JS? Devdocs pulls official language documentation from across the web into a single, easily accessible source. You can even use it offline! With an excellent fuzzy search and useful keyboard shortcuts, you'll never want to visit official documentation again.
+
+</br>
+
+## Wrapping up
+
+That's it folks. Hope these resources help you with your MVP, or hackathon, or first website, or whatever it is you're building.
