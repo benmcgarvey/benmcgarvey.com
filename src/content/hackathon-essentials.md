@@ -67,15 +67,15 @@ So, you've built your website and its working great on your local machine. How d
 
 ### ngrok - [ngrok.com](https://ngrok.com/)
 
-"Secure introspectable tunnels to localhost" - AKA, use your machine as the server! ngrok takes your `localhost:3000` address where your app is hosted locally exposes it on a public URL. No provisioning of services on AWS, no pushing to a remote server - just `ngrok https <YOUR_LOCAL_PORT>` and done.
+"Secure introspectable tunnels to localhost" - AKA, use your machine as the server! ngrok takes the local address where your app is hosted and exposes it on a public URL. No provisioning of services on AWS, no pushing to a remote server - just start your app, start ngrok and you're online.
 
 ### Github Pages - [pages.github.com](https://pages.github.com/)
 
-Now, the trouble with ngrok is that it will only live as long as your computer is forwarding the port and at some point you might want to turn off your computer. Github pages is a totally free static site server which you can use to host your new web app. All of the frameworks mentioned earlier have an option to build a static version of the site. Simply take the generated files and pop them in the repository. Set up is a breeze and new deployments are as simple as pushing to master - github will give you a `.github.io` url, handle routing, 404s and even give you HTTPS for free.
+The trouble with ngrok is that it will only live as long as your computer is forwarding the port and at some point you might want to turn off your computer. Github pages is a totally free static site server which you can use to host your new web app. All of the frameworks mentioned earlier have an option to build a static version of the site. Simply take the generated files and pop them in the repository. Set up is a breeze and new deployments are as simple as pushing to master - github will give you a `.github.io` url, handle routing, 404s and even give you HTTPS for free.
 
 ## Mocking
 
-Alright, the website is up and running, we've got a static site with a URL, what's next? We want to be able to serve dynamic content. What's the fun in just making a static site? For that, we need an API. But wait, we don't have an API! Maybe one part of your team is working on the API and the other part wants to get on with the UI. Here is where mocking comes in. Sometimes you just have to fake it until you make it.
+Alright, the website is up and running, we've got a static site with a URL, what's next? We want to be able to serve dynamic content. What's the fun in just making a static site? For that, we need an API. But wait, I hear you cry, we don't have an API yet! Maybe one part of your team is working on the API and the other part wants to get on with the UI. That's fine, here is where mocking comes in. Sometimes you just have to fake it until you make it.
 
 ### Mocky - [mocky.io](https://www.mocky.io/)
 
