@@ -127,13 +127,9 @@ export default {
       list: ['Javascript', 'PHP', 'SQL', 'HTML', 'SCSS/CSS']
     },
     {
-      name: 'studied languages',
-      list: ['C', 'Java', 'Python', 'C#', 'Haskell']
-    },
-    {
       name: 'tools & frameworks',
       list: [
-        'React 16',
+        'React',
         'GraphQL (Apollo)',
         'Cypress',
         'Laravel',
