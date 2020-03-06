@@ -14,10 +14,9 @@
     border: 1px solid #555;
     cursor: pointer;
     color: #555;
-    font-family: Arial;
     font-size: 15px;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
     margin: auto 0 auto 0.2in;
   }
   button:hover {
@@ -38,4 +37,4 @@
   }
 </style>
 
-<button class="no-print" onclick="window.print()">Print</button>
+<button class="no-print" onclick="window.print()">Get a printable copy</button>
