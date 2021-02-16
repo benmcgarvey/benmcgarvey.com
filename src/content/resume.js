@@ -6,28 +6,28 @@ export default {
     {
       name: 'website',
       href: 'https://benmcgarvey.com',
-      display: 'benmcgarvey.com'
+      display: 'benmcgarvey.com',
     },
     {
       name: 'github',
       href: 'https://github.com/benmcgarvey',
-      display: 'github.com/benmcgarvey'
+      display: 'github.com/benmcgarvey',
     },
     {
       name: 'email',
       href: 'mailto:hello@benmcgarvey.com',
-      display: 'hello@benmcgarvey.com'
+      display: 'hello@benmcgarvey.com',
     },
     {
       name: 'linkedin',
       href: 'https://linkedin.com/in/bmcgarvey',
-      display: 'linkedin.com/in/bmcgarvey'
+      display: 'linkedin.com/in/bmcgarvey',
     },
     {
       name: 'phone',
-      href: 'tel:+3479886914',
-      display: '(347) 988-6914'
-    }
+      href: 'tel:+610467666399',
+      display: '(+61) 0467 666 399',
+    },
   ],
   experiences: [
     {
@@ -41,8 +41,8 @@ export default {
       details: [
         'Full-stack engineer on a large, modern web application',
         'Agile development environment working closely with UX team and product manager',
-        'Primarily working on the frontend where Sidekicker uses React 16, Redux, and Apollo GraphQL to build a responsive marketplace application'
-      ]
+        'React, GraphQL, Laravel, MySQL',
+      ],
     },
     {
       src: 'sidekicker.png',
@@ -55,8 +55,8 @@ export default {
       details: [
         'Designed and implemented a maintainable testing project from scratch utilising the Page Object Model',
         'Took existing regression test scripts written in plain english by QA Tester and produced reusable test scripts using the Cypress testing framework',
-        "Integrated the tests into Sidekicker's CI/CD pipeline tool, Buildkite, using bash and docker-compose"
-      ]
+        "Integrated the tests into Sidekicker's CI/CD pipeline tool, Buildkite, using bash and docker-compose",
+      ],
     },
     {
       src: 'sidekicker.png',
@@ -68,8 +68,8 @@ export default {
       to: '06/18',
       details: [
         'Built a chrome extension to streamline BAU activities, increase efficiency and reduce user error',
-        'Wrote and maintained MySQL/Python dashboards for key marketplace metrics'
-      ]
+        'Wrote and maintained MySQL/Python dashboards for key marketplace metrics',
+      ],
     },
     {
       src: 'uom.png',
@@ -78,7 +78,7 @@ export default {
       place: 'University of Melbourne',
       location: 'Melbourne, Australia',
       from: '11/16',
-      to: '03/17'
+      to: '03/17',
     },
     {
       src: 'bcdtravel.png',
@@ -87,7 +87,7 @@ export default {
       place: 'BCD Travel',
       location: 'Melbourne, Australia',
       from: '05/15',
-      to: '11/16'
+      to: '11/16',
     },
     {
       src: 'statravel.png',
@@ -96,8 +96,8 @@ export default {
       place: 'STA Travel',
       location: 'Melbourne, Australia',
       from: '04/13',
-      to: '05/15'
-    }
+      to: '05/15',
+    },
   ],
   education: [
     {
@@ -110,40 +110,33 @@ export default {
       from: '06/16',
       to: '06/19',
       details: [
-        'Notable projects: Adversarial AI, Tower Defence Game (Unity/C#), Android Application'
-      ]
-    }
+        'Notable projects: Adversarial AI, Tower Defence Game (Unity/C#), Android Application',
+      ],
+    },
   ],
   note: {
     text:
       'Note: I am eligible to work in the U.S. on an E-3 visa, which is a two-year visa available only to Australians and which can be renewed indefinitely. The process to obtain the visa is straightforward and is summarized ',
     linkText: 'here',
     href:
-      'https://static1.squarespace.com/static/5d24cbfb75f55e000100967f/t/5db43b192ca7a63a6d405c38/1572092697712/jonkarolczak.com+-+Summary+of+E-3+Visa+Process+for+Employers.pdf'
+      'https://static1.squarespace.com/static/5d24cbfb75f55e000100967f/t/5db43b192ca7a63a6d405c38/1572092697712/jonkarolczak.com+-+Summary+of+E-3+Visa+Process+for+Employers.pdf',
   },
   skills: [
     {
       name: 'proficient languages',
-      list: ['Javascript', 'PHP', 'SQL', 'HTML', 'SCSS/CSS']
+      list: ['Typescript', 'PHP', 'SQL', 'HTML', 'SCSS/CSS'],
     },
     {
       name: 'tools & frameworks',
-      list: [
-        'React',
-        'GraphQL (Apollo)',
-        'Cypress',
-        'Laravel',
-        'Svelte',
-        'Buildkite'
-      ]
+      list: ['React', 'GraphQL (Apollo)', 'Cypress', 'Laravel'],
     },
     {
       name: 'services',
-      list: ['AWS (ECS, EC2, S3, RDS, IAM)', 'Docker', 'Git']
+      list: ['AWS (ECS, EC2, S3, RDS, IAM)', 'Docker', 'Git'],
     },
     {
       name: 'practices',
-      list: ['CI/CD', 'Agile', 'TDD', 'OOD']
-    }
-  ]
+      list: ['CI/CD', 'Agile', 'TDD', 'OOD'],
+    },
+  ],
 };
