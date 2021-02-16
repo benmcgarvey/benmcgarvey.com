@@ -1,0 +1,7 @@
+.container.svelte-nzxx5{display:flex;flex-flow:row wrap;justify-content:space-around;align-content:space-around}.contact.svelte-nzxx5{display:flex;align-content:center;justify-content:center;width:175px;flex:175px 0 0;height:fit-content;border:1px solid black;border-radius:4px;background:white;position:relative;padding:32px;margin:20px}.contact.svelte-nzxx5:after{content:" ";background:repeating-linear-gradient(
+      -45deg,
+      white,
+      white 5px,
+      black 5px,
+      black 8px
+    );border:1px solid black;border-radius:4px;top:10px;right:-10px;bottom:-10px;left:10px;position:absolute;z-index:-1}a.svelte-nzxx5{color:inherit;display:inline-block;text-decoration:none}a.svelte-nzxx5:visited{color:inherit}a.svelte-nzxx5:hover{color:#729eb0}

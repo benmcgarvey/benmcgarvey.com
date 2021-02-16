@@ -1,0 +1,20 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "Failing Gracefully",
+	"short_name": "failing-gracefully",
+	"display": "minimal-ui",
+    "start_url": "/",
+    "icons": [
+		{
+			"src": "acorn_256.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "acorn_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
